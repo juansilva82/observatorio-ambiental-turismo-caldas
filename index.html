@@ -255,6 +255,24 @@ textarea{min-height:64px;resize:vertical}
 .flag{border-left:4px solid var(--clay);padding:10px 14px;background:var(--surface);font-size:15px}
 .empty{border:2px dashed var(--line);border-radius:16px;padding:32px;text-align:center;display:grid;gap:12px;justify-items:center;color:var(--muted)}
 
+
+/* cifras */
+.cf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.cf-grid{grid-template-columns:1fr}}
+.cf-bars{display:grid;gap:10px}
+.cf-bar{display:grid;grid-template-columns:120px minmax(0,1fr);gap:10px;align-items:center;font-size:14.5px}
+.cf-bar .t{display:flex;align-items:center;gap:4px 8px;min-width:0;flex-wrap:wrap}
+.cf-bar .t i{display:block;height:22px;border-radius:0 6px 6px 0;background:var(--leaf);flex:none}
+.cf-bar .t span{white-space:nowrap;font-weight:700}
+.cf-bar .t em{font-style:normal;color:var(--muted);font-weight:400;font-size:13px;white-space:normal;flex-basis:100%}
+.cf-facts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media (max-width:560px){.cf-bar{grid-template-columns:86px minmax(0,1fr)}.cf-facts li{grid-template-columns:96px minmax(0,1fr)}}
+.cf-facts li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:8px;font-size:15px}
+.cf-facts li b{font:800 20px/1.1 var(--display);color:var(--blue)}
+.cf-src{font-size:12.5px;color:var(--muted)}
+.cf-src a{color:inherit}
+.cf-sources{font-size:14px;display:grid;gap:6px;margin:0;padding-left:20px}
+.cf-note{border-left:4px solid var(--gold);background:var(--surface);padding:12px 16px;border-radius:0 12px 12px 0;font-size:14.5px}
 /* charts */
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-block:24px}
 .kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:4px}
@@ -352,6 +370,7 @@ footer a{color:var(--leaf-bright)}
       <a href="#evaluar" data-r="evaluar">Autoevaluar</a>
       <a href="#resultados" data-r="resultados">Resultados</a>
       <a href="#graficos" data-r="graficos">Gráficos</a>
+      <a href="#cifras" data-r="cifras">Cifras</a>
     </nav>
   </div>
 </header>
@@ -573,6 +592,97 @@ footer a{color:var(--leaf-bright)}
       <div class="synth" id="synth3"></div>
       <div class="card" id="synthCompare" style="display:grid;gap:12px"></div>
     </section>
+  </div>
+</div>
+
+<div id="v-cifras" data-view hidden>
+  <div class="vhead" style="--vimg:url(img/01-ddaccdf873.jpg)"><div class="wrap">
+    <span class="eyebrow">Turismo ambiental en cifras</span>
+    <h1>El patrimonio natural que sostiene el turismo de Caldas</h1>
+    <p>Datos públicos sobre áreas protegidas, biodiversidad, visitantes y ocupación. Cada cifra indica su fuente y su fecha; se actualizarán con los reportes institucionales del Observatorio.</p>
+  </div></div>
+  <div class="wrap" style="padding-block:28px 72px;display:grid;gap:24px">
+    <div class="kpis">
+      <div class="kpi"><span>Aves registradas</span><b class="num">802</b><small>especies en Caldas, cerca del 42 % del país</small></div>
+      <div class="kpi"><span>Territorio protegido</span><b class="num">8,4 %</b><small>de Caldas en áreas protegidas (feb. 2026)</small></div>
+      <div class="kpi"><span>PNN Los Nevados</span><b class="num">71.106</b><small>visitantes en 2024</small></div>
+      <div class="kpi"><span>Orquídeas nativas</span><b class="num">~500</b><small>especies en la región de Manizales</small></div>
+    </div>
+
+    <div class="cf-grid">
+      <article class="chart"><span class="eyebrow">Parque Nacional Natural Los Nevados</span><h3>Visitantes por año</h3>
+        <div class="cf-bars"><div class="cf-bar"><b>2018</b><div class="t"><i style="width:calc(0.761 * (100% - 120px))"></i><span>54.095</span></div></div><div class="cf-bar"><b>2019</b><div class="t"><i style="width:calc(0.633 * (100% - 120px))"></i><span>45.029</span></div></div><div class="cf-bar"><b>2020–2022</b><div class="t"> <em>Sin dato en los informes consultados</em></div></div><div class="cf-bar"><b>2023</b><div class="t"><i style="width:calc(0.364 * (100% - 120px))"></i><span>25.884</span> <em>Cierre total por alerta naranja del volcán Nevado del Ruiz</em></div></div><div class="cf-bar"><b>2024</b><div class="t"><i style="width:calc(1.000 * (100% - 120px))"></i><span>71.106</span> <em>3.ª área protegida más visitada del país</em></div></div></div>
+        <span class="cf-src">Fuente: <a href="https://www.parquesnacionales.gov.co/wp-content/uploads/2025/03/INFORME-ANUAL-DE-VISITANTES-EN-AREAS-PROTEGIDAS-CON-VOCACION-ECOTURISTICA-2024.pdf" target="_blank" rel="noopener">Parques Nacionales Naturales · Informes anuales de visitantes 2019, 2023 y 2024</a></span>
+        <p class="cf-src">En 2024 las áreas protegidas con vocación ecoturística del país recibieron 1.336.862 visitantes; Los Nevados aportó cerca del 5 %.</p>
+      </article>
+      <article class="chart"><span class="eyebrow">Los Nevados</span><h3>Un parque que es fábrica de agua</h3>
+        <ul class="cf-facts">
+          <li><b>58.300 ha</b><span>de reserva ecológica entre Caldas, Risaralda, Quindío y Tolima</span></li>
+          <li><b>5.321 m</b><span>altura del volcán Nevado del Ruiz (Cumanday), su cumbre más alta</span></li>
+          <li><b>+3 millones</b><span>de personas reciben agua de su territorio</span></li>
+          <li><b>180.000 ha</b><span>de zona de influencia: 40 % ya en conservación y 60 % en transición sostenible</span></li>
+          <li><b>4 cierres</b><span>al año de 5 días para recuperar páramo y glaciares (Resolución 207 de 2023); el sector Brisas permanece abierto</span></li>
+        </ul>
+        <span class="cf-src">Fuentes: <a href="https://colombia.travel/es/blog/parque-natural-los-nevados-misterio-y-esplendor" target="_blank" rel="noopener">Colombia Travel</a> · <a href="https://www.minambiente.gov.co/mas-de-180-mil-hectareas-de-actividades-sostenibles-y-de-conservacion-protegerian-el-parque-nacional-natural-los-nevados/" target="_blank" rel="noopener">MinAmbiente (may. 2024)</a> · <a href="https://occidente.co/?p=415692" target="_blank" rel="noopener">Occidente (dic. 2025)</a></span>
+      </article>
+    </div>
+
+    <div class="cf-grid">
+      <article class="chart"><span class="eyebrow">Áreas protegidas</span><h3>Caldas amplió su territorio protegido</h3>
+        <div class="cf-bars">
+          <div class="cf-bar"><b>Antes</b><div class="t"><i style="width:calc(0.619 * (100% - 120px));background:var(--gray-mid)"></i><span>5,2 %</span></div></div>
+          <div class="cf-bar"><b>Feb. 2026</b><div class="t"><i style="width:calc(1 * (100% - 120px))"></i><span>8,4 %</span></div></div>
+        </div>
+        <ul class="cf-facts">
+          <li><b>23.972 ha</b><span>del nuevo DRMI <strong>Estrella Hídrica de Caldas</strong>, la mayor área protegida del departamento</span></li>
+          <li><b>5</b><span>municipios: Manizales, Neira, Aranzazu, Salamina y Marulanda</span></li>
+          <li><b>880</b><span>especies de flora y fauna registradas hasta ahora</span></li>
+          <li><b>250.000</b><span>habitantes abastecidos de agua, cerca de una cuarta parte de Caldas</span></li>
+        </ul>
+        <span class="cf-src">Fuentes: <a href="https://www.elespectador.com/ambiente/estrella-hidrica-de-caldas-asi-es-la-nueva-area-protegida-del-pais/" target="_blank" rel="noopener">El Espectador (26 feb. 2026)</a> · <a href="https://fronterainformativa.wordpress.com/2026/02/26/estrella-hidrica-la-nueva-y-mas-grande-area-protegida-de-caldas/" target="_blank" rel="noopener">Frontera Informativa (26 feb. 2026)</a></span>
+      </article>
+      <article class="chart"><span class="eyebrow">Biodiversidad</span><h3>Lo que viene a ver el visitante</h3>
+        <ul class="cf-facts">
+          <li><b>802</b><span>especies de aves registradas en Caldas, cerca del 42 % de las del país</span></li>
+          <li><b>34 · 38</b><span>de ellas en categoría de amenaza nacional y global, respectivamente</span></li>
+          <li><b>+10</b><span>especies endémicas reportadas por guías en la reserva de Río Blanco (Manizales)</span></li>
+          <li><b>~500</b><span>especies nativas de orquídeas en la región de Manizales</span></li>
+          <li><b>5.621</b><span>asistentes a la Exposición Nacional de Orquídeas 2026</span></li>
+        </ul>
+        <span class="cf-src">Fuentes: <a href="https://canaltrece.com.co/noticias/caldas-departamento-repleto-de-aves/" target="_blank" rel="noopener">Canal Trece, con base en «Estado actual del conocimiento de las aves en Caldas» (2018)</a> · <a href="https://prensamercosur.org/2026/10/09/cafe-y-naturaleza-impulsan-la-recuperacion-del-turismo-tras-el-sismo-de-agosto/" target="_blank" rel="noopener">EFE (oct. 2026)</a></span>
+      </article>
+    </div>
+
+    <div class="cf-grid">
+      <article class="chart"><span class="eyebrow">Ocupación hotelera</span><h3>Región Eje Cafetero · junio</h3>
+        <div class="cf-bars">
+          <div class="cf-bar"><b>Jun. 2025</b><div class="t"><i style="width:calc(0.417 * (100% - 120px));background:var(--gray-mid)"></i><span>41,7 %</span></div></div>
+          <div class="cf-bar"><b>Jun. 2026</b><div class="t"><i style="width:calc(0.396 * (100% - 120px))"></i><span>39,6 %</span></div></div>
+          <div class="cf-bar"><b>Nacional 2026</b><div class="t"><i style="width:calc(0.454 * (100% - 120px));background:var(--blue)"></i><span>45,4 %</span></div></div>
+        </div>
+        <span class="cf-src">Fuente: <a href="https://www.dane.gov.co/files/operaciones/EMA/bol-EMA-jun2026.pdf" target="_blank" rel="noopener">DANE · Encuesta Mensual de Alojamiento, junio de 2026 (provisional). Región Eje Cafetero: Caldas, Quindío y Risaralda.</a></span>
+      </article>
+      <article class="chart"><span class="eyebrow">Después del sismo de agosto de 2026</span><h3>Manizales: caída y recuperación</h3>
+        <div class="cf-bars">
+          <div class="cf-bar"><b>Esperada ago.</b><div class="t"><i style="width:calc(0.72 * (100% - 120px));background:var(--gray-mid)"></i><span>72 %</span></div></div>
+          <div class="cf-bar"><b>Real ago.</b><div class="t"><i style="width:calc(0.068 * (100% - 120px));background:var(--clay)"></i><span>6,8 %</span></div></div>
+          <div class="cf-bar"><b>Mediados sep.</b><div class="t"><i style="width:calc(0.38 * (100% - 120px))"></i><span>38 %</span></div></div>
+        </div>
+        <p style="font-size:15px">Cerca del 80 % de los hoteles de Manizales cancelaron reservas tras el sismo. Menos de dos meses después, alrededor del 95 % de la actividad turística y comercial de la ciudad había vuelto a operar, con el café, las orquídeas y el aviturismo como motores de la recuperación.</p>
+        <span class="cf-src">Fuente: <a href="https://prensamercosur.org/2026/10/09/cafe-y-naturaleza-impulsan-la-recuperacion-del-turismo-tras-el-sismo-de-agosto/" target="_blank" rel="noopener">EFE, con datos de la Alcaldía de Manizales y Cotelco Caldas (9 oct. 2026)</a></span>
+      </article>
+    </div>
+
+    <article class="chart"><span class="eyebrow">Patrimonio mundial</span><h3>Paisaje Cultural Cafetero</h3>
+      <ul class="cf-facts" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));display:grid">
+        <li><b>2011</b><span>inscrito por la UNESCO como Patrimonio de la Humanidad (25 de junio)</span></li>
+        <li><b>51</b><span>municipios cafeteros en Caldas, Quindío, Risaralda y Valle del Cauca</span></li>
+        <li><b>172.000 ha</b><span>sembradas en café dentro del paisaje</span></li>
+      </ul>
+      <span class="cf-src">Fuente: <a href="https://www.elespectador.com/turismo/paisaje-cultural-cafetero-cumple-10-anos-como-patrimonio-mundial/" target="_blank" rel="noopener">El Espectador · 10 años del PCC como patrimonio mundial</a></span>
+    </article>
+
+    <div class="cf-note"><strong>Nota metodológica.</strong> Cifras tomadas de fuentes públicas con corte a noviembre de 2026. Algunas provienen de informes oficiales (Parques Nacionales, DANE, MinAmbiente) y otras de medios que citan a entidades (Alcaldía de Manizales, Cotelco Caldas, Gobernación). El dato de aves es de un estudio de 2018. El Observatorio reemplazará estas cifras por series oficiales a medida que Corpocaldas, el Instituto Humboldt y Parques Nacionales carguen sus datos.</div>
   </div>
 </div>
 </main>
@@ -836,7 +946,7 @@ document.getElementById("csvBtn").addEventListener("click",()=>{
 });
 
 /* ---------- routing ---------- */
-const ROUTES=["inicio","evaluar","resultados","graficos"];
+const ROUTES=["inicio","evaluar","resultados","graficos","cifras"];
 function route(){
   let h=(location.hash||"#inicio").slice(1); if(!ROUTES.includes(h))h="inicio";
   document.querySelectorAll("[data-view]").forEach(v=>v.hidden=v.id!=="v-"+h);
