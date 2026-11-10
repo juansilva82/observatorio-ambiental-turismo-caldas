@@ -1,0 +1,21 @@
+# Observatorio Ambiental de Turismo Caldas — Hostinger (LiteSpeed/Apache)
+RewriteEngine On
+# Forzar https y quitar www (funciona con cualquier dominio)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# No publicar archivos internos del repositorio
+RedirectMatch 404 /\.git
+RedirectMatch 404 /README\.md$
+
+# Caché: imágenes 30 días; index y config siempre frescos
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>
+<FilesMatch "^(config\.js|index\.html)$">
+  Header set Cache-Control "no-cache"
+</FilesMatch>

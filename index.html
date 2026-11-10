@@ -1,0 +1,1144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Observatorio Ambiental de Turismo Caldas</title>
+<meta name="description" content="Autodiagnóstico Huella Verde: prestadores turísticos, alcaldías y la Gobernación miden y mejoran la huella ambiental del turismo en Caldas.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Observatorio Ambiental de Turismo Caldas">
+<meta property="og:description" content="Autodiagnóstico Huella Verde: prestadores turísticos, alcaldías y la Gobernación miden y mejoran la huella ambiental del turismo en Caldas.">
+<meta property="og:image" content="img/01-ddaccdf873.jpg">
+<meta name="theme-color" content="#0d2f28">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script src="config.js"></script>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: Observatorio — banner hero from the campaign piece, nature photo crops beside each section, dark rainforest bands; was: campaign-style site — dark forest hero with layered coffee-hill silhouettes, white content bands, sticky nav; tool views as forms + live score rail */
+:root{
+  --bg:#f3f7f4; --surface:#ffffff; --surface-2:#e8f1ec; --ink:#0f241d; --muted:#4a6058; --line:#d3e2da;
+  --forest:#0d2f28; --forest-2:#12443a; --on-forest:#ffffff; --on-forest-muted:#c3dbd0;
+  --leaf:#3c7a1c; --leaf-ink:#ffffff; --leaf-bright:#9ccc3c; --leaf-soft:#e6f2da;
+  --blue:#0f4784; --water:#369dd7; --gold:#e3a21a;
+  --green:#57762a; --green-2:#94b36d; --head:#ffffff; --head-ink:#0f4784;
+  --clay:#c24b2a; --sun:#d99a00; --gray-mid:#b8c1c9;
+  --lv0:#c24b2a; --lv1:#d99a00; --lv2:#6f9a35; --lv3:#0f4784;
+  --heat:15,71,132;
+  --display:"Montserrat","Segoe UI",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --shadow:0 1px 2px rgba(12,53,39,.06),0 8px 24px rgba(12,53,39,.06);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#091512; --surface:#0f211c; --surface-2:#153029; --ink:#e5f0ea; --muted:#a2bab0; --line:#24403a;
+  --forest:#08201b; --forest-2:#0f3a31; --on-forest:#f2f8f4; --on-forest-muted:#aac8bb;
+  --leaf:#9ccc3c; --leaf-ink:#0a1a12; --leaf-bright:#a9d652; --leaf-soft:#1c3622;
+  --blue:#4aa8e0; --water:#5ab4e6; --gold:#f0b53a;
+  --green:#7fa344; --green-2:#a9c47f; --head:#ffffff; --head-ink:#0f4784;
+  --clay:#e0694a; --sun:#e6aa1f; --gray-mid:#5d6b7a;
+  --lv0:#e0694a; --lv1:#e6aa1f; --lv2:#8ab64c; --lv3:#4aa8e0; --heat:74,168,224;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#091512; --surface:#0f211c; --surface-2:#153029; --ink:#e5f0ea; --muted:#a2bab0; --line:#24403a;
+  --forest:#08201b; --forest-2:#0f3a31; --on-forest:#f2f8f4; --on-forest-muted:#aac8bb;
+  --leaf:#9ccc3c; --leaf-ink:#0a1a12; --leaf-bright:#a9d652; --leaf-soft:#1c3622;
+  --blue:#4aa8e0; --water:#5ab4e6; --gold:#f0b53a;
+  --green:#7fa344; --green-2:#a9c47f; --head:#ffffff; --head-ink:#0f4784;
+  --clay:#e0694a; --sun:#e6aa1f; --gray-mid:#5d6b7a;
+  --lv0:#e0694a; --lv1:#e6aa1f; --lv2:#8ab64c; --lv3:#4aa8e0; --heat:74,168,224;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--head)}
+a{color:var(--leaf)}
+:focus-visible{outline:3px solid var(--leaf-bright);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(24px,3.1vw,36px);text-transform:uppercase;letter-spacing:.03em;font-weight:700;line-height:1.12}
+h3{font-size:20px;font-weight:700;letter-spacing:.02em}
+p{margin:0}
+.eyebrow{font:700 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* nav */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--head);color:var(--head-ink);border-bottom:4px solid var(--green-2);box-shadow:0 2px 12px rgba(15,71,132,.12)}
+.top .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-block:10px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--head-ink);margin-right:auto}
+.brand img,.brand .mark{height:48px;width:48px;display:block}
+.brand .sep{width:1px;align-self:stretch;background:#d5e0ea}
+.brand b{font:700 16px/1.15 var(--display);text-transform:uppercase;letter-spacing:.08em}
+.brand small{display:block;font-size:12px;color:#4b5d70;letter-spacing:.04em}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{color:var(--head-ink);text-decoration:none;font:600 13px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;padding:10px 12px;border-radius:999px}
+.nav a:hover{background:#eaf1f7}
+.nav a[aria-current="page"]{background:#0f4784;color:#fff}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font:700 14px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;padding:14px 22px;border-radius:999px;background:var(--leaf);color:var(--leaf-ink)}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.small{padding:9px 14px;font-size:14px}
+.btn.danger{background:var(--clay);color:#fff}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+
+/* hero */
+.hero{background:#0d2f28;position:relative;overflow:hidden;line-height:0}
+.hero .banner{width:100%;height:auto;max-height:78vh;object-fit:cover;object-position:center 40%;display:block}
+@media (prefers-reduced-motion:no-preference){.hero .banner{animation:kb 18s ease-out both}@keyframes kb{from{transform:scale(1.06)}to{transform:scale(1)}}}
+.hero2{line-height:1.5;background:linear-gradient(180deg,rgba(6,26,21,.55) 0%,rgba(6,26,21,.35) 40%,rgba(6,26,21,.85) 100%),var(--himg) center/cover no-repeat;color:#fff}
+.hero2 .wrap{padding-block:90px 48px;display:grid;justify-items:center;text-align:center;gap:18px}
+.h-title{display:grid;gap:4px;margin:0;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.h-big{font:500 clamp(40px,8vw,104px)/1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.h-mid{font:500 clamp(20px,3.6vw,46px)/1.1 var(--display);letter-spacing:.1em;text-transform:uppercase}
+.h-mid em{font-style:normal;font-weight:700;color:#9ccc3c}
+.h-small{font:500 clamp(14px,2vw,24px)/1 var(--display);letter-spacing:.5em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:16px}
+.h-small::before,.h-small::after{content:"";width:clamp(30px,10vw,140px);height:1px;background:#9ccc3c}
+.h-tag{font:italic 500 clamp(16px,1.8vw,22px)/1.4 var(--display);letter-spacing:.06em;max-width:34ch;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.hero2 .ejes{grid-template-columns:repeat(6,minmax(0,1fr));width:100%;max-width:960px;margin-top:28px}
+@media (max-width:760px){.hero2 .ejes{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.intro{background:linear-gradient(180deg,#0d2f28,#0a231e);color:#fff}
+.intro .wrap{padding-block:44px 52px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center}
+.intro-text{display:grid;gap:16px}
+.intro .eyebrow{color:#9ccc3c}
+.tagline{font:500 clamp(22px,2.8vw,32px)/1.25 var(--display);letter-spacing:.02em}
+.tagline em{font-style:normal;color:#9ccc3c;font-weight:700}
+.intro .lead{color:#c3dbd0;max-width:60ch}
+.intro .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.intro .btn.ghost{color:#fff}
+.istats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.istats .fact{background:rgba(255,255,255,.05);border:1px solid rgba(156,204,60,.35);border-radius:16px;padding:18px}
+.istats .fact b{color:#9ccc3c}
+.istats .fact span{color:#c3dbd0}
+.ejes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 12px}
+.eje{display:grid;justify-items:center;gap:10px;text-align:center;text-decoration:none;color:#fff;font:600 11.5px/1.3 var(--display);letter-spacing:.12em;text-transform:uppercase}
+.eje .ring{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--c);background:rgba(255,255,255,.03);transition:background .2s,transform .2s}
+.eje:hover .ring{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.eje svg{width:34px;height:34px;stroke:var(--c);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:900px){.intro .wrap{grid-template-columns:1fr}}
+@media (max-width:420px){.ejes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.hero .wrap{position:relative;z-index:1;padding-block:72px 150px;display:grid;gap:22px;max-width:1180px}
+.hero h1{font-size:clamp(46px,8vw,96px);text-transform:uppercase;font-weight:800;letter-spacing:-.005em;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--leaf-bright)}
+.hero p.lead{font-size:clamp(18px,2vw,21px);max-width:58ch;color:var(--on-forest-muted)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .eyebrow{color:var(--leaf-bright)}
+.drop{position:absolute;right:max(16px,6vw);top:60px;width:min(30vw,340px);opacity:.16;z-index:0}
+@media (max-width:900px){.drop{display:none}}
+.hills{position:absolute;inset:auto 0 -1px 0;width:100%;height:170px;display:block}
+.facts{background:var(--surface);border-bottom:1px solid var(--line)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding-block:28px}
+.fact b{display:block;font:800 38px/1 var(--display);color:var(--leaf)}
+.fact span{font-size:15px;color:var(--muted)}
+
+/* content sections */
+section.band{padding-block:72px}
+section.band.alt{background:var(--surface)}
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start}
+.split > *{min-width:0}
+.prose{display:grid;gap:16px;max-width:68ch}
+.prose ul{margin:0;padding-left:20px;display:grid;gap:8px}
+.kicker{display:grid;gap:12px;position:sticky;top:90px}
+.kicker .n{font:800 64px/0.8 var(--display);color:transparent;-webkit-text-stroke:1.5px var(--leaf)}
+.kimg{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;box-shadow:var(--shadow);max-width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--surface-2);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:600}
+.steps{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.steps li{background:var(--surface);padding:18px;display:grid;gap:6px;align-content:start}
+.steps li b{font:800 15px/1 var(--display);letter-spacing:.08em;color:var(--leaf);text-transform:uppercase}
+.steps li strong{font:700 21px/1.1 var(--display)}
+.steps li span{font-size:15px;color:var(--muted)}
+.laws{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.law{border-top:3px solid var(--green);background:var(--surface);padding:16px;display:grid;gap:4px}
+.law .tag{font:700 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.law strong{font:700 20px/1.15 var(--display)}
+.law p{font-size:15px;color:var(--muted)}
+.callout{background:var(--forest);color:var(--on-forest);border-radius:18px;padding:28px;display:grid;gap:12px}
+.callout p{color:var(--on-forest-muted)}
+.instr-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.instr{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:14px;align-content:start;box-shadow:var(--shadow)}
+.instr .mods{display:flex;flex-wrap:wrap;gap:6px}
+.instr .mods span{font-size:13px;font-weight:600;padding:4px 10px;border-radius:6px;background:color-mix(in srgb,var(--green-2) 22%,var(--surface))}
+
+/* view header */
+.vhead{background:linear-gradient(90deg,rgba(8,32,27,.94) 0%,rgba(8,32,27,.82) 55%,rgba(8,32,27,.45) 100%),var(--vimg) center/cover no-repeat,var(--forest);color:var(--on-forest)}
+.vhead .wrap{padding-block:40px 36px;display:grid;gap:10px}
+.vhead h1{font-size:clamp(28px,4.4vw,50px);text-transform:uppercase;font-weight:700;letter-spacing:.04em}
+.vhead p{color:var(--on-forest-muted);max-width:70ch}
+.vhead .eyebrow{color:var(--leaf-bright)}
+
+/* form */
+.pick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-block:28px}
+.pick button{all:unset;cursor:pointer;background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:6px}
+.pick button[aria-pressed="true"]{border-color:var(--leaf);box-shadow:0 0 0 4px var(--leaf-soft)}
+.pick button:focus-visible{outline:3px solid var(--leaf-bright)}
+.pick strong{font:700 20px/1.1 var(--display);text-transform:uppercase;letter-spacing:.04em}
+.pick span{color:var(--muted);font-size:15px}
+.formgrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start;padding-bottom:64px}
+.formgrid > *{min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+label.f{display:grid;gap:6px;font-size:14px;font-weight:600;color:var(--muted)}
+input[type=text],input[type=date],select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+textarea{min-height:64px;resize:vertical}
+.module{margin-top:22px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.module header{padding:16px 20px;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.module header .code{font:800 30px/1 var(--display);color:var(--leaf)}
+.module header h3{font-size:19px;text-transform:uppercase;margin-right:auto}
+.module header .w{font:700 14px/1 var(--body);color:var(--muted)}
+.module header p{flex-basis:100%;font-size:15px;color:var(--muted)}
+.q{padding:16px 20px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px;border-bottom:1px solid var(--line)}
+.q:last-child{border-bottom:0}
+.q .qc{font:800 18px/1.3 var(--display);color:var(--muted)}
+.q .qt{font-weight:600}
+.q .tip{grid-column:2;font-size:14px;color:var(--muted)}
+.q .opts{grid-column:2;display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt span{display:inline-flex;align-items:center;gap:6px;cursor:pointer;border:1.5px solid var(--line);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:600;background:var(--bg)}
+.opt span i{font-style:normal;font:800 14px/1 var(--display);width:20px;height:20px;border-radius:50%;display:inline-grid;place-items:center;background:var(--surface-2)}
+.opt input:checked + span{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.opt input:checked + span i{background:var(--bg);color:var(--ink)}
+.opt input:focus-visible + span{outline:3px solid var(--leaf-bright);outline-offset:2px}
+.q .sup{grid-column:2;margin-top:8px}
+.q .sup input{font-size:14px;padding:8px 10px}
+.q.missing{background:color-mix(in srgb,var(--sun) 10%,transparent)}
+.rail{position:sticky;top:84px;display:grid;gap:14px}
+.score-big{font:800 56px/1 var(--display);color:var(--blue)}
+.lvl{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;padding:5px 12px 5px 8px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line)}
+.lvl::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c)}
+.mbars{display:grid;gap:8px}
+.mbar{display:grid;grid-template-columns:22px minmax(0,1fr) 46px;gap:8px;align-items:center;font-size:14px}
+.mbar b{font:800 16px/1 var(--display);color:var(--muted)}
+.track{height:10px;border-radius:5px;background:var(--surface-2);overflow:hidden}
+.track i{display:block;height:100%;background:var(--leaf);border-radius:0 4px 4px 0}
+.prog{font-size:14px;color:var(--muted)}
+.suggest{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.suggest button{all:unset;cursor:pointer;font-size:13px;border:1px dashed var(--leaf);color:var(--ink);padding:5px 10px;border-radius:8px;background:var(--leaf-soft)}
+.suggest button:focus-visible{outline:3px solid var(--leaf-bright)}
+.notice{padding:12px 16px;border-radius:12px;background:var(--leaf-soft);font-size:15px}
+.notice.warn{background:color-mix(in srgb,var(--sun) 18%,var(--surface))}
+.dtable{width:100%;border-collapse:collapse;font-size:14px}
+.dtable th,.dtable td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.dtable input{font-size:14px;padding:6px 8px}
+.scroll{overflow-x:auto}
+
+/* results */
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-block:24px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface)}
+.seg button{all:unset;cursor:pointer;padding:7px 14px;border-radius:999px;font-weight:600;font-size:14px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.seg button:focus-visible{outline:3px solid var(--leaf-bright)}
+.rlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;padding-bottom:28px}
+.rcard{all:unset;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:10px;align-content:start}
+.rcard[aria-current="true"]{border-color:var(--leaf);box-shadow:0 0 0 3px var(--leaf-soft)}
+.rcard:focus-visible{outline:3px solid var(--leaf-bright)}
+.rcard .t{font:700 17px/1.15 var(--display);text-transform:uppercase}
+.rcard .meta{font-size:13px;color:var(--muted)}
+.rcard .row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.rcard .pts{font:800 34px/1 var(--display)}
+.spark{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;align-items:end;height:34px}
+.spark i{display:block;background:var(--leaf);border-radius:3px 3px 0 0;min-height:2px}
+.detail{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start;padding-bottom:72px}
+.detail > *{min-width:0}
+.sum{display:grid;gap:18px}
+.persona{background:linear-gradient(135deg,var(--forest),var(--forest-2));color:var(--on-forest);border-radius:18px;padding:24px;display:grid;gap:10px}
+.persona .eyebrow{color:var(--leaf-bright)}
+.persona h3{font-size:28px;text-transform:uppercase}
+.persona p{color:var(--on-forest-muted)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.list{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.list li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px;font-size:15px}
+.list li b{font:800 15px/1.5 var(--display);color:var(--muted)}
+.flag{border-left:4px solid var(--clay);padding:10px 14px;background:var(--surface);font-size:15px}
+.empty{border:2px dashed var(--line);border-radius:16px;padding:32px;text-align:center;display:grid;gap:12px;justify-items:center;color:var(--muted)}
+
+/* charts */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-block:24px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:4px}
+.kpi span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kpi b{font:800 34px/1 var(--display)}
+.kpi small{color:var(--muted);font-size:13px}
+.charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding-bottom:20px}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:12px;align-content:start;min-width:0}
+.chart.wide{grid-column:1/-1}
+.chart h3{font-size:18px;text-transform:uppercase}
+.chart .sub{font-size:14px;color:var(--muted)}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.chart svg text{fill:var(--muted);font:500 12px var(--body)}
+.chart svg text.ink{fill:var(--ink);font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;background:var(--c)}
+.heat{border-collapse:separate;border-spacing:2px;width:100%;font-size:14px}
+.heat th{font-weight:600;color:var(--muted);text-align:left;padding:6px 8px;white-space:nowrap}
+.heat th.m{text-align:center}
+.heat td{text-align:center;padding:9px 6px;border-radius:6px;font-weight:700;font-variant-numeric:tabular-nums}
+.synth{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.synth .card{display:grid;gap:10px;align-content:start}
+.synth .card h3{font-size:22px;text-transform:uppercase}
+.synth .card p,.synth .card li{font-size:15px}
+.synth ul{margin:0;padding-left:18px;display:grid;gap:6px}
+#tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;line-height:1.35;padding:8px 10px;border-radius:8px;max-width:260px;box-shadow:var(--shadow)}
+.statusbar{font-size:13px;color:var(--on-forest-muted)}
+footer{background:#0a231e;color:var(--on-forest-muted);font-size:14px}
+footer .wrap{padding-block:32px;display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+footer a{color:var(--leaf-bright)}
+.confirm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px}
+
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:210px;gap:12px}
+.gcell{margin:0;position:relative;overflow:hidden;border-radius:16px;background:var(--surface-2)}
+.gcell.tall{grid-row:span 2}
+.gcell.wide{grid-column:span 2}
+.gcell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gcell:hover img{transform:scale(1.05)}
+.gcell figcaption{position:absolute;inset:auto 0 0 0;padding:28px 14px 12px;background:linear-gradient(180deg,transparent,rgba(5,20,16,.85));color:#fff;display:grid;gap:2px}
+.gcell figcaption strong{font:700 13px/1.2 var(--display);letter-spacing:.1em;text-transform:uppercase}
+.gcell figcaption span{font-size:14px;color:#d4e6dc}
+.ghead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:end}
+.collage{background:linear-gradient(90deg,rgba(6,26,21,.9) 0%,rgba(6,26,21,.7) 45%,rgba(6,26,21,.15) 100%),var(--cimg) center/cover no-repeat;color:#fff}
+.collage .wrap{padding-block:110px;display:grid;gap:18px;max-width:1180px}
+.collage .eyebrow{color:#9ccc3c}
+.ctitle{font:600 clamp(24px,3.2vw,40px)/1.2 var(--display);max-width:22ch;letter-spacing:.01em}
+.ctitle em{font-style:normal;color:#9ccc3c}
+.collage .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.collage .btn.ghost{color:#fff}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:170px}.gcell.tall{grid-row:span 1}.gcell:last-child{grid-column:span 2}.ghead{grid-template-columns:1fr}.collage .wrap{padding-block:72px}}
+@media (max-width:420px){.gcell.wide{grid-column:span 2}}
+@media (max-width:900px){
+  .split,.formgrid,.detail{grid-template-columns:1fr}
+  .kicker,.rail{position:static}
+  .steps{grid-template-columns:1fr 1fr}
+  .charts,.synth,.instr-grid{grid-template-columns:1fr}
+  .kpis,.facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  .fields,.pick,.cols,.laws,.steps{grid-template-columns:1fr}
+  .hero .wrap{padding-block:48px 120px}
+  .brand small{display:none}
+  .brand b{font-size:12.5px}
+  .top{position:static}
+  .brand img{height:44px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .track i,.spark i{transition:width .4s ease,height .4s ease}
+}
+
+.consent{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;font-size:13.5px;line-height:1.4;color:var(--muted);align-items:start}
+.consent input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--leaf)}
+.consent a{color:var(--leaf)}
+.consent.missing{background:color-mix(in srgb,var(--sun) 14%,transparent);border-radius:8px;padding:6px}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.admin{display:none;gap:8px;align-items:center;flex-wrap:wrap}
+.admin.open{display:flex}
+.admin input{font:inherit;font-size:14px;padding:7px 10px;border-radius:8px;border:1px solid #2b4d44;background:#0d2f28;color:#fff;width:190px}
+.linkbtn{all:unset;cursor:pointer;color:var(--leaf-bright);text-decoration:underline;font-size:14px}
+.linkbtn:focus-visible{outline:2px solid var(--leaf-bright)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Observatorio Ambiental de Turismo Caldas, inicio">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#0d2f28"/><path d="M14 31c2-9 8-15 20-17-1 11-8 18-17 18" fill="#9ccc3c"/><path d="M14 33l11-11" stroke="#0d2f28" stroke-width="2" stroke-linecap="round"/><path d="M8 34c6-3 11-3 16 0s10 3 16 0" stroke="#369dd7" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      <span class="sep" aria-hidden="true"></span>
+      <span><b>Observatorio Ambiental<br>de Turismo · Caldas</b><small>Autodiagnóstico Huella Verde</small></span>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#inicio" data-r="inicio">Inicio</a>
+      <a href="#evaluar" data-r="evaluar">Autoevaluar</a>
+      <a href="#resultados" data-r="resultados">Resultados</a>
+      <a href="#graficos" data-r="graficos">Gráficos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ================= INICIO ================= -->
+<div id="v-inicio" data-view>
+  <section class="hero">
+    <h1 class="sr">Observatorio Ambiental de Turismo Caldas</h1>
+    <div class="hero2" style="--himg:url(img/01-ddaccdf873.jpg)"><div class="wrap">
+      <p class="h-title"><span class="h-big">Observatorio</span><span class="h-mid"><em>Ambiental</em> de Turismo</span><span class="h-small">Caldas</span></p>
+      <p class="h-tag">Conocimiento para un turismo que conserva y genera bienestar</p>
+      <div class="ejes" id="ejes"></div>
+    </div></div>
+  </section>
+  <section class="intro">
+    <div class="wrap">
+      <div class="intro-text">
+        <span class="eyebrow">Turismo sostenible · Caldas, Colombia</span>
+        <p class="tagline">Medir, comparar y <em>mejorar</em> la huella ambiental del <em>turismo</em></p>
+        <p class="lead">Herramienta de autodiagnóstico del Observatorio. Prestadores turísticos, alcaldías y la Gobernación evalúan cómo su operación afecta el agua, la energía, los residuos y la biodiversidad del Paisaje Cultural Cafetero, y trazan su ruta de mejora con base en la evaluación de impacto ambiental.</p>
+        <div class="ctas"><a class="btn" href="#evaluar">Diligenciar autoevaluación</a><a class="btn ghost" href="#graficos">Ver gráficos y síntesis</a></div>
+      </div>
+      <div class="istats">
+      <div class="fact"><b class="num">2</b><span>instrumentos: empresas turísticas y entidades territoriales</span></div>
+      <div class="fact"><b class="num">6</b><span>dimensiones ambientales ponderadas en cada cartilla</span></div>
+      <div class="fact"><b class="num">30</b><span>preguntas con escala 0 · 1 · 2 y consejo práctico</span></div>
+      <div class="fact"><b class="num">900+</b><span>especies de aves en Caldas que dependen de un territorio bien gestionado</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="band gallery-band">
+    <div class="wrap" style="display:grid;gap:24px">
+      <div class="ghead"><div style="display:grid;gap:8px"><span class="eyebrow">Caldas biodiverso</span><h2>Lo que protege cada autodiagnóstico</h2></div><p class="muted">Cada respuesta de las cartillas se traduce en agua más limpia, bosques conectados y especies que siguen siendo el mayor atractivo turístico del departamento.</p></div>
+      <div class="gallery"><figure class="gcell tall"><img src="img/02-7955ac92b8.jpg" alt="Oso de anteojos" loading="lazy"><figcaption><strong>Oso de anteojos</strong><span>Mamífero emblemático de los bosques andinos</span></figcaption></figure><figure class="gcell "><img src="img/03-5476e2f136.jpg" alt="Aves de colores" loading="lazy"><figcaption><strong>Aves de colores</strong><span>Más de 900 especies de aves en Caldas</span></figcaption></figure><figure class="gcell "><img src="img/04-e15eb9dec4.jpg" alt="Páramo" loading="lazy"><figcaption><strong>Páramo</strong><span>Fábrica de agua del Parque Nacional Los Nevados</span></figcaption></figure><figure class="gcell "><img src="img/05-3c65928892.jpg" alt="Colibríes" loading="lazy"><figcaption><strong>Colibríes</strong><span>Polinizadores de flores nativas</span></figcaption></figure><figure class="gcell wide"><img src="img/06-88ec62d408.jpg" alt="Cascadas y cañones" loading="lazy"><figcaption><strong>Cascadas y cañones</strong><span>Atractivos naturales que exigen reglas de manejo</span></figcaption></figure><figure class="gcell "><img src="img/07-0ca2c780fb.jpg" alt="Anfibios" loading="lazy"><figcaption><strong>Anfibios</strong><span>Indicadores de la calidad del agua</span></figcaption></figure></div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap split">
+      <div class="kicker"><span class="n">01</span><span class="eyebrow">Concepto</span><h2>¿Qué son las evaluaciones de impacto ambiental?</h2><img class="kimg" src="img/08-c1553e7094.jpg" alt="Observación de aves en el bosque de Caldas" loading="lazy"></div>
+      <div class="prose">
+        <p>Las evaluaciones de impacto ambiental son mecanismos que sirven para identificar y analizar cuáles pueden ser los efectos ambientales que se pueden provocar al realizar un proyecto. Con este instrumento podemos ser más sostenibles y gestionar de una manera más eficaz los recursos, garantizando buenas prácticas para no dañar excesivamente al medio ambiente.</p>
+        <p>La importancia de realizar una eficaz evaluación de impacto ambiental ayudará a que se elijan trayectorias enfocadas a la sustentabilidad del plan, posibilitando la integración de cuestiones ambientales y generando condiciones beneficiosas para su progreso.</p>
+        <p class="muted">En Colombia la evaluación de impacto ambiental es un principio de la política ambiental desde la Ley 99 de 1993: los estudios de impacto ambiental son el instrumento básico para decidir sobre obras y actividades que afecten de manera significativa el medio ambiente natural o artificial.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="wrap split">
+      <div class="kicker"><span class="n">02</span><span class="eyebrow">Propósito</span><h2>¿Cuál es la finalidad de una evaluación medioambiental?</h2><img class="kimg" src="img/09-704a184b24.jpg" alt="Nevado del Ruiz sobre el bosque y el embalse" loading="lazy"></div>
+      <div class="prose">
+        <p>La finalidad de la evaluación es determinar cómo puede afectar, negativa o positivamente, el desarrollo de una acción empresarial en el medio ambiente y cómo minimizar los efectos negativos medioambientales que se puedan causar.</p>
+        <p>La huella medioambiental de una empresa se puede dejar en los ecosistemas que la rodean y puede afectar a la salud humana.</p>
+        <p>Los sistemas de gestión ambiental basados en la norma <strong>ISO 14001</strong> convierten esa evaluación en un ciclo permanente: identificar aspectos e impactos, fijar objetivos, actuar, medir y mejorar. Las cartillas de esta herramienta siguen la misma lógica y toman indicadores de ISO 14001, GRI 300 y las normas técnicas sectoriales de turismo sostenible de Colombia (NTS-TS 001-1 y NTS-TS 002).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap split">
+      <div class="kicker"><span class="n">03</span><span class="eyebrow">Contenido mínimo</span><h2>Requisitos que debe contener la evaluación</h2><img class="kimg" src="img/10-dc40163a83.jpg" alt="Orquídea del bosque andino" loading="lazy"></div>
+      <div class="prose">
+        <ul>
+          <li>Las evaluaciones recogerán compromisos sostenibles que provoquen mínimos impactos en el medio ambiente y en la sociedad.</li>
+          <li>Deberán minimizar los riesgos detectados intentando buscar alternativas medioambientales beneficiosas.</li>
+          <li>Fomentarán la inclusión de nuevos desafíos en el momento de adoptar decisiones de desarrollo del plan, para favorecer la biodiversidad, luchar contra los efectos del cambio climático o buscar recursos que no sean tan limitados en la naturaleza, entre otros.</li>
+        </ul>
+        <p class="muted">En la práctica colombiana, un estudio de impacto ambiental incluye la descripción del proyecto, la caracterización del área de influencia (medios abiótico, biótico y socioeconómico), la zonificación ambiental, la demanda de recursos naturales, la evaluación de impactos, el Plan de Manejo Ambiental, el plan de seguimiento y monitoreo, el plan de contingencia y el plan de cierre.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="wrap split">
+      <div class="kicker"><span class="n">04</span><span class="eyebrow">Método</span><h2>¿Cómo se realiza la evaluación?</h2><img class="kimg" src="img/11-a696d7d6a8.jpg" alt="Embalse entre montañas con niebla" loading="lazy"></div>
+      <div class="prose">
+        <p>Para realizar una buena evaluación de impacto hay que elaborar varios documentos técnicos que realizarán predicciones de previsibles impactos ambientales del proyecto. Los efectos sobre los aspectos ambientales pueden ser:</p>
+        <div class="chips"><span class="chip">Temporales o permanentes</span><span class="chip">Positivos o negativos</span><span class="chip">Reversibles o irreversibles</span><span class="chip">Continuos</span><span class="chip">Discontinuos</span><span class="chip">Periódicos</span></div>
+        <p>Una vez realizada la evaluación de impacto ambiental tendrá que hacerse un seguimiento ambiental para vigilar su eficacia. Este seguimiento analizará si se están cumpliendo las medidas preventivas recogidas en el estudio de impacto ambiental.</p>
+        <p><strong>Ruta del licenciamiento ambiental en Colombia</strong></p>
+        <ol class="steps">
+          <li><b>Paso 1</b><strong>Necesidad de DAA</strong><span>La autoridad define si el proyecto debe presentar un Diagnóstico Ambiental de Alternativas.</span></li>
+          <li><b>Paso 2</b><strong>Términos de referencia</strong><span>Se elabora el estudio con la Metodología General para la Presentación de Estudios Ambientales.</span></li>
+          <li><b>Paso 3</b><strong>Estudio de Impacto Ambiental</strong><span>Identifica y valora impactos y propone medidas de prevención, mitigación, corrección y compensación.</span></li>
+          <li><b>Paso 4</b><strong>Evaluación</strong><span>La ANLA o la Corporación Autónoma Regional revisa el estudio y visita el área.</span></li>
+          <li><b>Paso 5</b><strong>Licencia y PMA</strong><span>Se otorga o niega la licencia con su Plan de Manejo Ambiental obligatorio.</span></li>
+          <li><b>Paso 6</b><strong>Seguimiento</strong><span>El titular entrega Informes de Cumplimiento Ambiental y la autoridad controla.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap split">
+      <div class="kicker"><span class="n">05</span><span class="eyebrow">Autodiagnóstico</span><h2>¿Por qué autoevaluarse si no se necesita licencia?</h2><img class="kimg" src="img/12-e2ccc2688a.jpg" alt="Café en flor y en cereza, Paisaje Cultural Cafetero" loading="lazy"></div>
+      <div class="prose">
+        <p>La mayoría de hoteles, fincas, restaurantes, alcaldías y dependencias públicas no tramitan una licencia ambiental, pero todos consumen agua y energía, generan residuos y vertimientos e intervienen la biodiversidad. El autodiagnóstico lleva la lógica de la evaluación de impacto a esa escala: identificar dónde está el impacto, reconocer lo que ya se hace bien y priorizar las acciones que más reducen el daño.</p>
+        <p>Esta herramienta aplica las cartillas <strong>HUELLA VERDE</strong> de CORPOCALDAS para establecimientos turísticos y <strong>HUELLA VERDE TERRITORIAL</strong> para alcaldías y la Gobernación de Caldas. Cada respuesta se califica en una escala de 0 a 2, cada módulo tiene un peso y el resultado ubica a la entidad en uno de cuatro niveles con un plan de acción propio.</p>
+        <div class="callout">
+          <h3>Del diagnóstico al comportamiento</h3>
+          <p>Con cada cartilla diligenciada el sitio sintetiza el comportamiento ambiental de la entidad: en qué dimensiones actúa de forma consolidada, dónde tiene prácticas a medio camino, qué riesgos normativos aparecen y cuáles son las tres acciones con mayor efecto para su nivel.</p>
+          <div><a class="btn" href="#evaluar">Empezar ahora</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="collage" style="--cimg:url(img/06-88ec62d408.jpg)">
+    <div class="wrap">
+      <span class="eyebrow">Un solo territorio</span>
+      <p class="ctitle">Del páramo al cafetal, del nevado al embalse: el turismo de Caldas depende del <em>agua</em> y de la <em>biodiversidad</em>.</p>
+      <div class="ctas"><a class="btn" href="#evaluar">Evaluar mi entidad</a><a class="btn ghost" href="#resultados">Ver comportamiento por entidad</a></div>
+    </div>
+  </section>
+  <section class="band alt">
+    <div class="wrap split">
+      <div class="kicker" id="normativa"><span class="n">06</span><span class="eyebrow">Normativa</span><h2>Legislación relacionada</h2><img class="kimg" src="img/13-1e7c46630c.jpg" alt="Quebrada de montaña en el bosque húmedo" loading="lazy"></div>
+      <div class="prose" style="max-width:none">
+        <p>Para acceder a normativa vigente el Ministerio pone a disposición de los usuarios el siguiente enlace: Legislación sobre evaluación ambiental, BOE legislación consolidada, Ley 21/2013, de 9 de diciembre, de evaluación ambiental (España). Para entidades en Colombia aplica el siguiente marco:</p>
+        <div class="laws">
+          <div class="law"><span class="tag">Colombia · Constitución</span><strong>Constitución Política de 1991, arts. 79 y 80</strong><p>Derecho a un ambiente sano y deber del Estado de planificar el aprovechamiento de los recursos naturales.</p></div>
+          <div class="law"><span class="tag">Colombia · Ley</span><strong><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=297" target="_blank" rel="noopener">Ley 99 de 1993</a></strong><p>Crea el Ministerio de Ambiente y el SINA, regula la licencia ambiental (Título VIII) y el 1 % para áreas de acueductos (art. 111).</p></div>
+          <div class="law"><span class="tag">Colombia · Decreto</span><strong><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=78153" target="_blank" rel="noopener">Decreto 1076 de 2015</a></strong><p>Decreto Único Reglamentario del sector ambiente: licencias, permisos de vertimientos, PUEAA y demás trámites.</p></div>
+          <div class="law"><span class="tag">Colombia · Autoridad</span><strong><a href="https://www.anla.gov.co" target="_blank" rel="noopener">ANLA</a> y <a href="https://www.corpocaldas.gov.co" target="_blank" rel="noopener">CORPOCALDAS</a></strong><p>La ANLA licencia los proyectos de competencia nacional; las CAR evalúan, otorgan permisos y hacen seguimiento en su jurisdicción.</p></div>
+          <div class="law"><span class="tag">Colombia · Ley</span><strong>Ley 1333 de 2009</strong><p>Procedimiento sancionatorio ambiental: medidas preventivas y sanciones por infracciones.</p></div>
+          <div class="law"><span class="tag">Colombia · Sectorial</span><strong>Ley 2068 de 2020, Ley 2232 de 2022, Ley 1523 de 2012</strong><p>Turismo sostenible, reducción de plásticos de un solo uso y gestión del riesgo de desastres.</p></div>
+          <div class="law"><span class="tag">España · Ley</span><strong><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2013-12913" target="_blank" rel="noopener">Ley 21/2013 de evaluación ambiental</a></strong><p>Referente europeo de la evaluación ambiental estratégica y de proyectos (BOE, legislación consolidada).</p></div>
+          <div class="law"><span class="tag">Internacional</span><strong>ISO 14001 · GRI 300 · GSTC</strong><p>Estándares de gestión y reporte ambiental en los que se basan los indicadores de las cartillas.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap" style="display:grid;gap:24px">
+      <div style="display:grid;gap:8px"><span class="eyebrow">Los instrumentos</span><h2>Elija la cartilla que corresponde a su entidad</h2></div>
+      <div class="instr-grid" id="instrCards"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= EVALUAR ================= -->
+<div id="v-evaluar" data-view hidden>
+  <div class="vhead" style="--vimg:url(img/08-c1553e7094.jpg)"><div class="wrap">
+    <span class="eyebrow">Autoevaluación</span>
+    <h1>Diligenciar la cartilla</h1>
+    <p>Elija el instrumento, registre los datos de la entidad y marque la opción que describe la situación actual, no la deseada. El puntaje se calcula mientras responde.</p>
+  </div></div>
+  <div class="wrap">
+    <div class="pick" role="group" aria-label="Instrumento">
+      <button type="button" data-pick="E" aria-pressed="true"><strong>Huella Verde</strong><span>Hoteles, fincas turísticas, restaurantes, agencias, operadores y empresas privadas.</span></button>
+      <button type="button" data-pick="T" aria-pressed="false"><strong>Huella Verde Territorial</strong><span>Alcaldías y Gobernación: planeación, ambiente y turismo, con soporte de cada respuesta.</span></button>
+    </div>
+    <form id="evalForm" class="formgrid" novalidate>
+      <div id="formMain"></div>
+      <aside class="rail" aria-live="polite">
+        <div class="card" style="display:grid;gap:12px">
+          <span class="eyebrow">Puntaje en vivo</span>
+          <div><span class="score-big num" id="liveScore">0</span><span class="muted"> / 100</span></div>
+          <span class="lvl" id="liveLvl" style="--c:var(--lv0)">Semilla</span>
+          <div class="mbars" id="liveBars"></div>
+          <div class="prog" id="liveProg"></div>
+        </div>
+        <div class="card" style="display:grid;gap:10px">
+          <div id="saveMsg" class="notice" hidden></div>
+          <label class="consent" id="consentBox"><input type="checkbox" id="f-consent"><span>Autorizo el tratamiento de mis datos personales para los fines del Observatorio, conforme a la Ley 1581 de 2012 y la <a href="#" id="policyLink" target="_blank" rel="noopener">política de tratamiento de datos</a>. El nombre del establecimiento, el municipio y los puntajes se publican en la síntesis; el nombre y contacto del responsable no.</span></label><input type="text" id="f-web" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn" type="submit" id="saveBtn">Guardar autoevaluación</button>
+          <button class="btn ghost small" type="button" id="resetBtn">Limpiar formulario</button>
+          <p class="prog" id="storeNote"></p>
+        </div>
+      </aside>
+    </form>
+  </div>
+</div>
+
+<!-- ================= RESULTADOS ================= -->
+<div id="v-resultados" data-view hidden>
+  <div class="vhead" style="--vimg:url(img/14-8efc00e124.jpg)"><div class="wrap">
+    <span class="eyebrow">Síntesis por entidad</span>
+    <h1>Comportamiento ambiental</h1>
+    <p>Cada tarjeta es una cartilla diligenciada. Seleccione una para ver su perfil de comportamiento, sus fortalezas, brechas, riesgos normativos y acciones prioritarias.</p>
+  </div></div>
+  <div class="wrap">
+    <div class="toolbar">
+      <div class="seg" role="group" aria-label="Filtrar por instrumento" id="rFilter">
+        <button type="button" data-f="all" aria-pressed="true">Todas</button>
+        <button type="button" data-f="E" aria-pressed="false">Establecimientos</button>
+        <button type="button" data-f="T" aria-pressed="false">Territoriales</button>
+      </div>
+      <span class="muted" id="rCount"></span>
+    </div>
+    <div class="rlist" id="rList"></div>
+    <div id="rDetail"></div>
+  </div>
+</div>
+
+<!-- ================= GRAFICOS ================= -->
+<div id="v-graficos" data-view hidden>
+  <div class="vhead" style="--vimg:url(img/11-a696d7d6a8.jpg)"><div class="wrap">
+    <span class="eyebrow">Observatorio</span>
+    <h1>Observatorio en cifras</h1>
+    <p>Resultados agregados de todas las cartillas guardadas y síntesis de las tres cartillas aportadas.</p>
+  </div></div>
+  <div class="wrap">
+    <div class="toolbar">
+      <div class="seg" role="group" aria-label="Instrumento" id="gFilter">
+        <button type="button" data-f="E" aria-pressed="true">Huella Verde · establecimientos</button>
+        <button type="button" data-f="T" aria-pressed="false">Huella Verde Territorial</button>
+      </div>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="charts" id="charts"></div>
+    <section style="padding-block:28px 72px;display:grid;gap:20px">
+      <div style="display:grid;gap:8px"><span class="eyebrow">Síntesis</span><h2>Las tres cartillas aportadas</h2></div>
+      <div class="synth" id="synth3"></div>
+      <div class="card" id="synthCompare" style="display:grid;gap:12px"></div>
+    </section>
+  </div>
+</div>
+</main>
+
+<footer><div class="wrap">
+  <span style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><span>Observatorio Ambiental de Turismo Caldas · Autodiagnóstico ambiental para el turismo sostenible.<br>Instrumentos basados en las cartillas HUELLA VERDE y HUELLA VERDE TERRITORIAL de CORPOCALDAS.</span></span>
+  <span style="display:grid;gap:8px;justify-items:end"><span id="syncState">Conectando con el almacenamiento…</span><span><button type="button" class="linkbtn" id="adminToggle">Acceso administrador</button></span><span class="admin" id="adminBox"><input type="password" id="adminKey" placeholder="Clave de administrador" autocomplete="current-password"><button type="button" class="btn small" id="adminIn">Entrar</button></span><span class="admin" id="adminTools"><button type="button" class="btn small" id="csvBtn">Descargar CSV</button><button type="button" class="btn ghost small" id="adminOut" style="color:#fff">Salir</button></span><span id="adminMsg" class="statusbar"></span></span>
+</div></footer>
+<div id="tip" hidden></div>
+
+<script>
+/* ---------- instrument definitions (from the CORPOCALDAS cartillas) ---------- */
+const INSTR={
+E:{id:"E",nombre:"Huella Verde",publico:"Establecimientos turísticos y empresas",
+ escala:["No lo hacemos","En proceso","Sí, consolidado"],
+ niveles:["Semilla Ambiental","En Camino Verde","Líder Ambiental","Referente Sostenible"],
+ tipos:["Hotel","Posada","Finca turística","Alojamiento rural","Restaurante","Agencia de viajes","Operador turístico","Otra empresa privada"],
+ modulos:[
+ {k:"A",t:"Gestión del agua",w:20,d:"Consumo, calidad y vertimientos. Clave en la cuenca del río Chinchiná y afluentes del PCC.",q:[
+  ["¿Miden o registran el consumo de agua mensualmente (metros cúbicos o litros)?","Sin medición no hay gestión. Revise las facturas de los últimos 12 meses o instale un medidor por área."],
+  ["¿El establecimiento cuenta con dispositivos ahorradores de agua (grifos, duchas, sanitarios de bajo consumo)?","Un aireador de grifo reduce el consumo hasta un 50 % sin afectar la experiencia del visitante."],
+  ["¿Los vertimientos (aguas grises y negras) reciben algún tratamiento antes de ir al alcantarillado o fuente hídrica?","En zonas rurales del PCC una trampa de grasas es el mínimo básico exigido por CORPOCALDAS."],
+  ["¿Existe algún programa de reutilización del agua (riego, lavandería, limpieza de áreas comunes)?","La pluviosidad de Caldas hace muy viable la recolección de agua lluvia para riego y limpieza."],
+  ["¿El personal conoce y aplica protocolos de ahorro de agua documentados?","El comportamiento humano es el factor número uno en consumo. Capacitar y documentar marca la diferencia."]]},
+ {k:"B",t:"Energía y emisiones",w:20,d:"Consumo eléctrico, combustibles y huella de carbono del establecimiento.",q:[
+  ["¿Conocen el consumo mensual de energía eléctrica (kWh) y llevan registro histórico?","Sin una línea base es imposible saber si se está mejorando. Revise las facturas del último año."],
+  ["¿Más del 80 % de la iluminación del establecimiento utiliza tecnología LED?","Un bombillo LED consume hasta 90 % menos que uno incandescente. En Caldas el retorno es de 8 a 14 meses."],
+  ["¿Se aprovecha la luz natural en el diseño para reducir la necesidad de iluminación artificial?","La arquitectura cafetera tradicional ya lo incorpora. Potenciarlo en reformas es prácticamente gratuito."],
+  ["¿Se han implementado medidas de eficiencia en cocina, lavandería o sistemas de climatización?","La cocina puede representar el 40 % del consumo energético. Equipos eficientes y mantenimiento dan gran ahorro."],
+  ["¿El establecimiento usa alguna fuente de energía renovable (paneles solares, calentadores solares, biomasa)?","Los calentadores solares de agua en Caldas tienen un retorno de inversión de 2 a 3 años."]]},
+ {k:"C",t:"Residuos sólidos",w:20,d:"Separación en la fuente, reducción, compostaje y principios de economía circular.",q:[
+  ["¿Tienen puntos de separación de residuos con al menos tres categorías (orgánicos, reciclables, ordinarios)?","Parque Arví (Medellín) redujo un 40 % los residuos al relleno sanitario separando en 5 categorías."],
+  ["¿Se realiza compostaje de residuos orgánicos generados en cocina o jardín?","Los orgánicos pueden ser el 60 % del total. El compost sirve para jardines o huertos propios."],
+  ["¿Se han eliminado o reducido significativamente los plásticos de un solo uso (pitillos, bolsas, envases desechables)?","La Ley 2232 de 2022 reduce gradualmente los plásticos de un solo uso. No cumplir expone a sanciones."],
+  ["¿Existe alguna alianza o convenio con recicladores de oficio o cooperativas de reciclaje del municipio?","En Manizales y otros municipios hay recolección gratuita para establecimientos que ya separan en la fuente."],
+  ["¿Los visitantes reciben información clara sobre cómo separar los residuos dentro del establecimiento?","Señalética clara en los puntos de separación genera cumplimiento espontáneo desde el primer día."]]},
+ {k:"D",t:"Biodiversidad y entorno natural",w:15,d:"Jardines nativos, fauna silvestre, corredores ecológicos. Esencial en el Paisaje Cultural Cafetero.",q:[
+  ["¿El establecimiento incorpora plantas nativas del Eje Cafetero en sus jardines o áreas verdes?","Las plantas nativas requieren menos agua, no necesitan pesticidas y atraen aves endémicas."],
+  ["¿Se evita el uso de pesticidas, herbicidas o fertilizantes químicos en el mantenimiento de áreas verdes?","Los agroquímicos contaminan fuentes de agua superficial. El control manual o biológico es viable y barato."],
+  ["¿Se cuenta con una política que prohíbe la tenencia, alimentación o comercio de fauna silvestre?","Tener fauna silvestre, incluso rescatada, es delito ambiental en Colombia (Ley 599 de 2000, art. 328)."],
+  ["¿El establecimiento participa en iniciativas de restauración ecológica o siembra de árboles nativos?","CORPOCALDAS tiene el programa Caldas se viste de verde. Participar puede generar beneficios tributarios."],
+  ["¿Los visitantes reciben educación ambiental sobre la biodiversidad local (aves, plantas, ecosistemas)?","Caldas tiene más de 900 especies de aves. El aviturismo es un atractivo de alto valor y bajo impacto."]]},
+ {k:"E",t:"Compras y cadena de suministro",w:15,d:"Proveedores locales, productos ecológicos y fortalecimiento de la economía regional.",q:[
+  ["¿Más del 50 % de los alimentos e insumos se adquieren a proveedores locales o regionales del departamento?","Comprar local reduce la huella de transporte, fortalece la economía regional y garantiza frescura."],
+  ["¿Se priorizan productos de agricultores o artesanos locales en la oferta gastronómica o en la tienda?","El modelo de la finca a la mesa aumentó la facturación turística de haciendas cafeteras del Eje Cafetero."],
+  ["¿Los productos de limpieza utilizados son biodegradables o de bajo impacto ambiental?","Los detergentes con fosfatos contaminan quebradas y ríos. Hay alternativas de igual eficacia y precio similar."],
+  ["¿Se evalúan los proveedores con criterios ambientales (manejo de residuos, certificaciones, emisiones)?","La sostenibilidad de la cadena de valor es tan importante como la propia."],
+  ["¿Se ofrecen experiencias de turismo de origen (café, cacao u otros productos del territorio con trazabilidad)?","El turismo de origen es la tendencia de mayor crecimiento en el Eje Cafetero."]]},
+ {k:"F",t:"Comunidad y gobernanza ambiental",w:10,d:"Responsabilidad social, gestión interna, certificaciones y compromiso institucional.",q:[
+  ["¿Existe un responsable designado, aunque sea informalmente, para los temas ambientales del establecimiento?","No necesita ser un cargo exclusivo. Lo importante es que alguien esté a cargo y rinda cuentas."],
+  ["¿El establecimiento ha gestionado o recibido alguna certificación de turismo sostenible?","NTS-TS 002, Green Key, Rainforest Alliance o el Distintivo de Sostenibilidad de Fontur son opciones."],
+  ["¿El establecimiento apoya activamente actividades culturales, deportivas o sociales de la comunidad local?","La comunidad que se beneficia del turismo es la que protege y promueve el destino."],
+  ["¿Existe un canal formal o informal para que visitantes o vecinos reporten impactos ambientales negativos?","La retroalimentación externa detecta problemas que internamente no se perciben a tiempo."],
+  ["¿El establecimiento tiene o está formulando un plan ambiental con metas medibles a corto plazo?","Una meta simple, como reducir 20 % el consumo de agua en 6 meses, con seguimiento mensual ya es un plan."]]}],
+ plan:[
+  {A:["Registre el consumo mensual de agua con las facturas del servicio.","Instale aireadores en grifos de cocina y baños."],B:["Cambie a LED los bombillos de mayor uso.","Construya una línea base de kWh con las facturas de 12 meses."],C:["Instale tres canecas diferenciadas con tapa y señalética de color.","Elimine de inmediato pitillos y plásticos de un solo uso."],D:["Siembre una especie de planta nativa en un área verde.","Escriba una política de una página que prohíba tener o alimentar fauna silvestre."],E:["Haga un primer pedido de prueba a un productor local.","Reemplace un producto de limpieza convencional por uno biodegradable."],F:["Designe a una persona responsable de los temas ambientales.","Fije una meta ambiental sencilla para los próximos 3 meses."]},
+  {A:["Fije una meta mensual de consumo (máx. 150 litros por huésped y noche).","Instale recolección de agua lluvia para riego."],B:["Complete la migración a LED en el 100 % de los espacios.","Cotice un calentador solar de agua."],C:["Instale una compostera para los orgánicos de cocina.","Formalice un convenio con la cooperativa de reciclaje del municipio."],D:["Diseñe un jardín con al menos 50 % de especies nativas rotuladas.","Participe en una jornada de siembra de Caldas se viste de verde."],E:["Formalice una lista de proveedores locales con producto y frecuencia.","Alcance un mínimo de 50 % de insumos locales en cocina."],F:["Elabore un plan ambiental de una página con 3 metas y responsables.","Habilite un canal para reportes ambientales de visitantes."]},
+  {A:["Realice un balance hídrico completo de entradas y salidas.","Trate las aguas grises para reutilizarlas en riego o limpieza."],B:["Contrate una auditoría energética profesional.","Instale paneles solares para al menos el 30 % de la demanda."],C:["Supere el 70 % de aprovechamiento de residuos.","Entregue compost terminado a agricultores del entorno."],D:["Haga un inventario de aves, mariposas y plantas con la academia.","Conecte el predio a un corredor biológico con predios vecinos."],E:["Supere el 70 % de insumos locales con trazabilidad de 5 productos.","Formalice acuerdos de compra de largo plazo con familias agricultoras."],F:["Inicie la certificación NTS-TS 002 o Green Key.","Lidere un grupo de buenas prácticas con otros establecimientos."]},
+  {A:["Opere un sistema de agua con cero vertimientos sin tratar.","Publique un reporte anual de agua con indicadores GRI 303."],B:["Avance a la neutralidad de carbono con compensación verificada.","Publique emisiones GHG Protocol alcances 1, 2 y 3."],C:["Declare un objetivo de residuo cero (más de 90 % aprovechado).","Diseñe un programa de economía circular con proveedores y comunidad."],D:["Postule el predio como Reserva Natural de la Sociedad Civil.","Cree un programa de educación ambiental para escuelas locales."],E:["Certifique la cadena local en comercio justo u orgánico.","Publique una guía abierta de proveedores locales."],F:["Postúlese a premios internacionales de turismo sostenible.","Publique un informe de sostenibilidad alineado con GRI."]}],
+ alertas:[["A",2,0,"Vertimientos sin tratamiento: requieren permiso de vertimientos ante CORPOCALDAS (Decreto 1076 de 2015)."],["C",2,1,"Plásticos de un solo uso sin eliminar: la Ley 2232 de 2022 establece su reducción obligatoria."],["D",2,1,"Sin política sobre fauna silvestre: su tenencia o comercio es delito (Ley 599 de 2000, art. 328)."],["D",1,0,"Uso de agroquímicos en áreas verdes: riesgo de contaminación de fuentes hídricas."]]
+},
+T:{id:"T",nombre:"Huella Verde Territorial",publico:"Alcaldías y Gobernación",soporte:true,
+ escala:["No existe","En proceso","Sí, con soporte"],
+ niveles:["Territorio Semilla","Territorio en Camino","Territorio Líder","Territorio Referente"],
+ tipos:["Alcaldía","Gobernación"],
+ modulos:[
+ {k:"A",t:"Agua y saneamiento en el destino",w:20,d:"Fuentes abastecedoras, uso eficiente, vertimientos y calidad del agua en sitios de uso recreativo.",q:[
+  ["¿La entidad destina y ejecuta el 1 % de sus ingresos corrientes para áreas estratégicas de acueductos (art. 111, Ley 99 de 1993)?","Esos predios pueden ser a la vez reservas hídricas y atractivos de naturaleza o aulas ambientales.","Rubro, ejecución presupuestal y predios adquiridos o PSA","¿La Gobernación destina y ejecuta el 1 % del art. 111 de la Ley 99 de 1993?"],
+  ["¿El municipio o su prestador de acueducto tiene Programa de Uso Eficiente y Ahorro del Agua (PUEAA, Ley 373 de 1997) aprobado por CORPOCALDAS?","En temporada alta la demanda de agua sube: el PUEAA de un municipio turístico debe preverlo.","Resolución de aprobación de CORPOCALDAS","¿El Plan Departamental de Agua apoya PUEAA y PSMV en municipios turísticos?"],
+  ["¿El Plan de Saneamiento y Manejo de Vertimientos (PSMV) está aprobado y muestra avance en su ejecución?","Un río contaminado aguas abajo del casco urbano es un pasivo ambiental y turístico a la vez.","Resolución del PSMV e informe de avance","¿Se cofinancian obras de saneamiento en destinos turísticos priorizados?"],
+  ["¿Se identifican y acompañan, junto con CORPOCALDAS, los alojamientos rurales (fincas, glampings, ecolodges) frente a sus permisos de vertimiento?","Los alojamientos rurales crecen más rápido que su formalización ambiental. Conocerlos es el primer paso.","Base de datos de establecimientos y actas de visita","¿Se apoya con CORPOCALDAS la formalización ambiental de alojamientos rurales?"],
+  ["¿Se monitorea la calidad del agua en fuentes de uso recreativo (charcos, ríos, termales) y se informa al público?","Un bañista enfermo es una crisis de reputación para el destino. Un aviso claro la previene.","Resultados de muestreo y avisos publicados","¿Existe monitoreo departamental de calidad del agua en sitios recreativos?"]]},
+ {k:"B",t:"Planificación y ordenamiento",w:20,d:"El turismo sostenible empieza en el POT y en el Plan de Desarrollo: lo que no se planea, no se gestiona.",q:[
+  ["¿El POT, PBOT o EOT vigente identifica zonas de uso turístico, sus restricciones ambientales y los lineamientos del Paisaje Cultural Cafetero?","En municipios del PCC, el CONPES 3803 de 2014 orienta su protección.","Acuerdo del POT/EOT y cartografía","¿La Gobernación brinda asistencia técnica a municipios para incluir el turismo y el PCC en sus POT/EOT?"],
+  ["¿El Plan de Desarrollo vigente tiene metas de turismo sostenible con indicador, responsable y presupuesto?","Una meta sin indicador no se puede medir ni reportar al Observatorio.","Acuerdo del Plan y página de la meta","¿El Plan de Desarrollo Departamental tiene metas de turismo sostenible con indicador y presupuesto?"],
+  ["¿Existe un inventario de atractivos turísticos naturales y culturales actualizado en los últimos 4 años?","MinComercio tiene una metodología oficial para inventarios turísticos: úsela y sus datos serán comparables.","Documento de inventario","¿Existe un inventario departamental de atractivos que consolide los municipales?"],
+  ["¿Se han definido capacidades de carga o reglas de manejo para los atractivos naturales más visitados?","Empiece por el sitio más visitado: una cascada, un sendero, un mirador.","Estudio, decreto o reglamento de uso","¿Hay lineamientos departamentales de capacidad de carga o manejo de atractivos?"],
+  ["¿Los sitios turísticos están incluidos en el Plan Municipal de Gestión del Riesgo de Desastres (Ley 1523 de 2012)?","Un destino sin plan de riesgo pone en juego a sus visitantes y su reputación.","PMGRD con capítulo o mapa de sitios turísticos","¿El plan departamental de gestión del riesgo incluye corredores y sitios turísticos?"]]},
+ {k:"C",t:"Residuos sólidos y espacio público",w:15,d:"Residuos en temporada alta, ferias y eventos, reciclaje inclusivo y limpieza de atractivos.",q:[
+  ["¿El PGIRS actualizado (Resolución 754 de 2014) contempla la generación de residuos en temporada turística y en eventos?","Las fiestas y ferias multiplican los residuos en pocos días. El PGIRS debe tener un plan para esos picos.","Decreto de adopción del PGIRS","¿La Gobernación apoya la actualización de PGIRS con enfoque turístico?"],
+  ["¿El permiso para ferias, fiestas y eventos públicos exige un plan de manejo de residuos con separación en la fuente?","Convertir la separación en requisito del permiso cuesta poco y cambia la cultura del evento.","Decreto, circular o formato de permiso","¿Los eventos departamentales exigen un plan de manejo de residuos?"],
+  ["¿La entidad aplica la reducción de plásticos de un solo uso (Ley 2232 de 2022) en sus eventos y dependencias?","La entidad pública da ejemplo: si la feria municipal no usa icopor, el comercio lo sigue.","Circular, decreto o registro de compras","¿La Gobernación aplica la Ley 2232 de 2022 en sus eventos y sedes?"],
+  ["¿Los recicladores de oficio están reconocidos y la ruta selectiva cubre las zonas de mayor actividad turística?","El reciclaje inclusivo es parte del servicio público de aseo y una buena historia para el destino.","Censo de recicladores y mapa de ruta","¿Se apoyan programas de reciclaje inclusivo en municipios turísticos?"],
+  ["¿Los atractivos naturales (miradores, senderos, cascadas) tienen puntos de residuos, señalización y un responsable de su limpieza?","Lo que el visitante encuentra sucio es lo que publica en sus redes.","Plan de operación o registro de jornadas","¿Se cofinancia infraestructura de residuos en atractivos de interés departamental?"]]},
+ {k:"D",t:"Biodiversidad y áreas protegidas",w:15,d:"Áreas protegidas, restauración, fauna silvestre y turismo de naturaleza regulado. Esencial en el PCC.",q:[
+  ["¿El territorio tiene áreas protegidas o estrategias complementarias de conservación (SIDAP/SIMAP) con reglas claras de uso público?","Las reglas de uso público (horarios, cupos, guías) permiten abrir un área al turismo sin degradarla.","Acuerdo de declaratoria o plan de manejo","¿El SIDAP Caldas articula las áreas protegidas con reglas de uso turístico?"],
+  ["¿La entidad participa en iniciativas de restauración ecológica o siembra de especies nativas con CORPOCALDAS?","Las hectáreas restauradas son un indicador que el Observatorio puede mostrar y comparar año a año.","Convenio y hectáreas restauradas","¿La Gobernación cofinancia restauración ecológica con CORPOCALDAS?"],
+  ["¿Se realizan campañas u operativos contra la tenencia y el tráfico de fauna silvestre en zonas turísticas y mercados?","La tenencia de fauna silvestre es delito ambiental (Ley 599 de 2000, art. 328). El turista no debe verla ni comprarla.","Actas de operativos o piezas de campaña","¿Se coordinan campañas departamentales contra el tráfico de fauna silvestre?"],
+  ["¿Se promueve un turismo de naturaleza regulado, con senderos señalizados y guías locales formados, incluido el aviturismo?","Caldas tiene más de 900 especies de aves. El guía local formado es el mejor custodio del sendero.","Inventario de senderos y listado de guías formados","¿Existe un programa departamental de aviturismo y formación de guías?"],
+  ["¿La entidad reporta o facilita el registro de datos de biodiversidad (eBird, SiB Colombia, Instituto Humboldt)?","Estos datos alimentan la sección de biodiversidad del Observatorio.","Registros, convenios o enlaces a las plataformas","¿La Gobernación consolida y comparte datos de biodiversidad con el Instituto Humboldt?"]]},
+ {k:"E",t:"Gobernanza turística y datos",w:20,d:"El módulo del Observatorio: instancias activas, datos del sector y reporte oportuno.",q:[
+  ["¿Existe un consejo o mesa de turismo activo, que sesione al menos dos veces al año e incluya temas ambientales?","Una mesa que no sesiona no existe. Las actas son la evidencia más simple de gobernanza.","Acto de creación y actas del último año","¿El Consejo Departamental de Turismo sesiona e incluye temas ambientales?"],
+  ["¿La entidad sabe cuántos prestadores turísticos tiene y cuántos cuentan con Registro Nacional de Turismo (RNT)?","La Cámara de Comercio administra el RNT y puede compartir el dato.","Base de datos actualizada de prestadores","¿La Gobernación consolida el dato de prestadores con RNT por municipio?"],
+  ["¿La entidad promueve que los prestadores de su territorio apliquen la cartilla HUELLA VERDE y los acompaña?","El nivel de un territorio también se mide por el de sus empresarios. Aquí se conectan los dos instrumentos.","Convocatorias y número de establecimientos evaluados","¿La Gobernación impulsa la aplicación de HUELLA VERDE en todo el departamento?"],
+  ["¿Se mide el flujo de visitantes (conteos en atractivos, ocupación hotelera, punto de información turística)?","Un conteo sencillo y constante vale más que un estudio grande cada diez años.","Registros de conteo o reportes de ocupación","¿Existe un sistema departamental de medición del flujo de visitantes?"],
+  ["¿La entidad participa en la Mesa de Gobernanza Ambiental Turística de Caldas y reporta al Observatorio en los plazos?","Reportar a tiempo es lo que pone al territorio en el mapa del Observatorio.","Listas de asistencia y constancia de reporte","¿La Gobernación participa en la Mesa de Gobernanza y reporta al Observatorio?"]]},
+ {k:"F",t:"Capacidades e inversión",w:10,d:"Responsables, recursos, alianzas, educación ambiental y rendición de cuentas.",q:[
+  ["¿Hay un funcionario o dependencia designada formalmente para articular ambiente y turismo?","No tiene que ser un cargo nuevo. Basta con que las funciones estén asignadas por escrito.","Acto administrativo o manual de funciones","¿Hay una dependencia departamental con funciones asignadas en ambiente y turismo?"],
+  ["¿Existe un rubro presupuestal para turismo sostenible o gestión ambiental del turismo, ejecutado en más del 70 %?","Lo que no está en el presupuesto es solo una intención.","Ejecución presupuestal del último año","¿Existe un rubro departamental para turismo sostenible ejecutado en más del 70 %?"],
+  ["¿La entidad tiene convenios vigentes con CORPOCALDAS, la academia, FUTURA u organismos de cooperación en esta materia?","Las alianzas multiplican lo que un municipio pequeño puede hacer con sus propios recursos.","Convenios vigentes","¿Hay convenios vigentes con CORPOCALDAS, academia, FUTURA o cooperación?"],
+  ["¿El CIDEA o los PRAE y PROCEDA incluyen a prestadores turísticos y comunidades receptoras (Ley 1549 de 2012)?","La comunidad que entiende el valor de su entorno es la que lo cuida frente al visitante.","Plan del CIDEA o proyectos PRAE / PROCEDA","¿El CIDEA departamental incluye al sector turístico?"],
+  ["¿La entidad rinde cuentas públicamente sobre sus metas ambientales del turismo?","Publicar los avances, aunque sean modestos, genera confianza y compromete a la siguiente administración.","Informe o audiencia de rendición de cuentas","¿La Gobernación rinde cuentas sobre las metas ambientales del turismo?"]]}],
+ datos:[["Población total (último dato DANE)","habitantes"],["Prestadores turísticos identificados","número"],["Prestadores con RNT activo","número"],["Establecimientos evaluados con HUELLA VERDE","n.° por nivel"],["Visitantes estimados en el último año","personas"],["Atractivos naturales inventariados","número"],["Área protegida o en conservación","hectáreas"],["Hectáreas restauradas en el último año","hectáreas"],["Inversión ejecutada del 1 % (art. 111, Ley 99 de 1993)","pesos"],["Presupuesto ejecutado en turismo sostenible","pesos"],["Cobertura de ruta selectiva en zonas turísticas","% del área"],["Especies de aves registradas (eBird)","número"]],
+ plan:[
+  {A:["Verifique con el acueducto el estado del PUEAA y del PSMV.","Revise cuánto se destinó al 1 % del art. 111 de la Ley 99."],B:["Revise si el EOT/POT y el Plan de Desarrollo mencionan el turismo.","Liste los 10 atractivos más visitados del territorio."],C:["Exija un plan de residuos en el próximo permiso de feria o evento.","Elimine icopor y plásticos de un solo uso en eventos de la entidad."],D:["Identifique las áreas protegidas o de importancia ambiental.","Haga una campaña visible contra la tenencia de fauna silvestre."],E:["Convoque una primera sesión de la mesa de turismo, con acta.","Solicite a la Cámara de Comercio el listado de prestadores con RNT."],F:["Asigne por escrito a un funcionario las funciones de ambiente y turismo.","Identifique los rubros que apoyan el turismo sostenible."]},
+  {A:["Programe muestreos de agua recreativa antes de temporada alta.","Levante con CORPOCALDAS el listado de alojamientos rurales y sus permisos."],B:["Actualice el inventario de atractivos con la metodología de MinComercio.","Incluya una meta de turismo sostenible con indicador en el Plan de Desarrollo."],C:["Incorpore en el PGIRS un capítulo de temporada turística y eventos.","Extienda la ruta selectiva a zonas turísticas con recicladores de oficio."],D:["Señalice los senderos y forme un primer grupo de guías locales.","Formalice un convenio de restauración y reporte las hectáreas."],E:["Garantice dos sesiones anuales de la mesa de turismo con agenda ambiental.","Inicie un conteo mensual de visitantes en uno o dos atractivos."],F:["Cree un rubro específico para turismo sostenible.","Incluya las metas ambientales del turismo en la rendición de cuentas."]},
+  {A:["Publique la calidad del agua recreativa en un tablero abierto.","Acompañe a los alojamientos rurales hasta su formalización ambiental."],B:["Incorpore capacidades de carga y zonificación turística en el POT/EOT.","Realice un simulacro de emergencia en un sitio turístico."],C:["Declare las fiestas del municipio sin plásticos de un solo uso.","Publique los datos de residuos de temporada alta año a año."],D:["Formule el plan de manejo del área protegida con capítulo de uso público.","Firme un convenio de datos con el Instituto Humboldt o la academia."],E:["Logre que más del 30 % de los prestadores con RNT apliquen HUELLA VERDE.","Consolide un reporte anual de turismo sostenible del territorio."],F:["Gestione cooperación o regalías con datos del Observatorio.","Forme a funcionarios y prestadores con la academia regional."]},
+  {A:["Consolide pagos por servicios ambientales ligados al turismo.","Publique un balance hídrico anual del destino."],B:["Adopte un plan de turismo sostenible del destino a largo plazo.","Postule el destino al Distintivo de Fontur o a la NTS-TS 001-1."],C:["Declare metas de basura cero para eventos y atractivos.","Sea referente subregional en residuos del turismo."],D:["Registre las áreas protegidas en el RUNAP y vincúlelas a redes AICA/IBA.","Conecte sus áreas a corredores biológicos con municipios vecinos."],E:["Publique datos abiertos del turismo sostenible del territorio.","Postule el destino a Green Destinations."],F:["Institucionalice la política de turismo sostenible por acuerdo.","Rinda cuentas con un informe de sostenibilidad del destino."]}],
+ alertas:[["A",2,0,"Sin PSMV aprobado o en ejecución: incumplimiento ante CORPOCALDAS en saneamiento de vertimientos."],["C",0,0,"PGIRS sin contemplar temporada turística ni eventos (Resolución 754 de 2014)."],["B",4,0,"Sitios turísticos fuera del plan de gestión del riesgo (Ley 1523 de 2012)."],["A",0,0,"Sin ejecución del 1 % para áreas de acueductos (art. 111, Ley 99 de 1993)."]]
+}};
+const MODS="ABCDEF".split("");
+const LV_COLORS=["var(--lv0)","var(--lv1)","var(--lv2)","var(--lv3)"];
+const LV_RANGES=["0–29 %","30–59 %","60–84 %","85–100 %"];
+
+/* ---------- scoring ---------- */
+function qkey(m,i){return m+(i+1)}
+function score(rec){
+  const ins=INSTR[rec.instrumento]; const r=rec.respuestas||{}; const s=rec.soportes||{};
+  const mods={}; let total=0, answered=0, downgraded=0;
+  ins.modulos.forEach(m=>{
+    let sub=0;
+    m.q.forEach((q,i)=>{const k=qkey(m.k,i);let v=r[k];
+      if(v===undefined||v===null||v==="")return; v=+v; answered++;
+      if(ins.soporte&&v===2&&!(s[k]||"").trim()){v=1;downgraded++}
+      sub+=v});
+    mods[m.k]={sub,pct:sub*10,pts:sub/10*m.w};
+    total+=sub/10*m.w;
+  });
+  total=Math.round(total*100)/100;
+  return {mods,total,answered,downgraded,level:levelOf(total)};
+}
+function levelOf(p){return p<30?0:p<60?1:p<85?2:3}
+function eff(rec,k){const ins=INSTR[rec.instrumento];let v=rec.respuestas?.[k];if(v===undefined||v===null||v==="")return null;v=+v;if(ins.soporte&&v===2&&!((rec.soportes||{})[k]||"").trim())v=1;return v}
+function qText(ins,m,i,tipo){const q=m.q[i];return (ins.id==="T"&&tipo==="Gobernación"&&q[3])?q[3]:q[0]}
+const fmt=n=>(Math.round(n*10)/10).toLocaleString("es-CO");
+
+/* ---------- behaviour synthesis ---------- */
+function synthesize(rec){
+  const ins=INSTR[rec.instrumento], sc=score(rec);
+  let n=[0,0,0]; const gaps=[], partial=[], strong=[];
+  ins.modulos.forEach(m=>m.q.forEach((q,i)=>{const k=qkey(m.k,i);const v=eff(rec,k);if(v===null)return;n[v]++;
+    const item={k:m.k+"."+(i+1),t:qText(ins,m,i,rec.tipo),tip:q[1],m:m.k};
+    (v===0?gaps:v===1?partial:strong).push(item)}));
+  const tot=n[0]+n[1]+n[2]||1;
+  const ranked=ins.modulos.map(m=>({...m,pct:sc.mods[m.k].pct})).sort((a,b)=>b.pct-a.pct);
+  const best=ranked.filter(m=>m.pct===ranked[0].pct), worst=ranked.filter(m=>m.pct===ranked[ranked.length-1].pct);
+  const spread=ranked[0].pct-ranked[ranked.length-1].pct;
+  const names=a=>a.map(m=>m.t.toLowerCase()).join(" y ");
+  let perfil,desc;
+  const s0=n[0]/tot,s1=n[1]/tot,s2=n[2]/tot;
+  if(s0>=.4){perfil="Reactivo";desc=`Actúa sobre lo mínimo: ${n[0]} de ${tot} prácticas no existen todavía. La gestión depende de exigencias externas más que de una decisión propia.`}
+  else if(s1>=.4&&s2<.5){perfil="En transición";desc=`Tiene conciencia ambiental y muchas prácticas iniciadas (${n[1]} en proceso), pero aún no las consolida ni las documenta. El reto es sistematizar.`}
+  else if(s2>=.6&&spread<=30){perfil="Proactivo integral";desc=`Mantiene prácticas consolidadas en casi todas las dimensiones (${n[2]} de ${tot}) con un desempeño parejo entre módulos.`}
+  else if(s2>=.45){perfil="Proactivo selectivo";desc=`Consolida su gestión en ${names(best)}, pero deja rezagado ${names(worst)}: la brecha entre su mejor y su peor módulo es de ${spread} puntos porcentuales.`}
+  else {perfil="Mixto";desc=`Combina prácticas consolidadas (${n[2]}), en proceso (${n[1]}) y ausentes (${n[0]}) sin un patrón dominante; conviene priorizar por módulo.`}
+  const alerts=(ins.alertas||[]).filter(([m,i,th])=>{const v=eff(rec,qkey(m,i));return v!==null&&v<=th}).map(a=>a[3]);
+  const plan=ins.plan[sc.level];
+  const recs=[];worst.concat(ranked.slice(-2)).forEach(m=>{(plan[m.k]||[]).forEach(a=>{if(recs.length<4&&!recs.some(x=>x.a===a))recs.push({m:m.k,t:m.t,a})})});
+  const conducta=[
+    `Obtiene ${fmt(sc.total)} puntos sobre 100, en el nivel ${ins.niveles[sc.level]}.`,
+    `Su dimensión más fuerte es ${names(best)} (${best[0].pct} %) y la más débil ${names(worst)} (${worst[0].pct} %).`,
+    sc.downgraded?`${sc.downgraded} respuesta(s) marcadas como “sí” no tienen soporte y se calificaron con 1 punto por la regla de evidencia.`:null
+  ].filter(Boolean);
+  return {sc,n,tot,gaps,partial,strong,perfil,desc,best,worst,spread,alerts,recs,conducta,ranked};
+}
+
+/* ---------- storage: shared db with local fallback ---------- */
+const SEED=[{"id": "cartilla-charrascal", "instrumento": "E", "entidad": "Hacienda Charrascal · Fogón de Palo", "municipio": "Manizales", "tipo": "Finca interpretativa · restaurante", "sector": "Privado", "fecha": "2026-10-06", "respuestas": {"A1": 2, "A2": 1, "A3": 2, "A4": 2, "A5": 1, "B1": 2, "B2": 2, "B3": 2, "B4": 1, "B5": 1, "C1": 2, "C2": 1, "C3": 1, "C4": 1, "C5": 1, "D1": 2, "D2": 1, "D3": 2, "D4": 2, "D5": 2, "E1": 2, "E2": 2, "E3": 1, "E4": 1, "E5": 2, "F1": 2, "F2": 2, "F3": 2, "F4": 1, "F5": 2}, "soportes": {}, "acciones": ["Contactar un gestor externo para los residuos aprovechables.", "Colocar avisos informativos sobre el inventario biocultural.", "Revisar tuberías, sanitarios y alcantarillados para detectar fugas de aguas limpias y servidas."], "origen": "cartilla", "puntaje": 78.5, "nivel": 2, "creado": "2026-10-06T00:00:00Z"}, {"id": "cartilla-el-bosque", "instrumento": "E", "entidad": "Hacienda El Bosque SAS", "municipio": "Manizales", "tipo": "Alojamiento rural", "sector": "Privado", "fecha": "", "respuestas": {"A1": 0, "A2": 2, "A3": 2, "A4": 1, "A5": 0, "B1": 2, "B2": 1, "B3": 2, "B4": 1, "B5": 1, "C1": 2, "C2": 1, "C3": 2, "C4": 2, "C5": 1, "D1": 2, "D2": 2, "D3": 2, "D4": 2, "D5": 2, "E1": 2, "E2": 2, "E3": 1, "E4": 1, "E5": 2, "F1": 2, "F2": 2, "F3": 2, "F4": 2, "F5": 2}, "soportes": {}, "acciones": [], "origen": "cartilla", "puntaje": 77, "nivel": 2, "creado": "2026-10-27T00:00:00Z"}];
+let records=[]; let mode="loading";
+const CFG=window.OBS_CONFIG||{};
+const API=(CFG.apiUrl||"").trim();
+const LKEY="observatorio.evaluaciones.local", AKEY="observatorio.admin";
+function lsGet(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function ssGet(k){try{return sessionStorage.getItem(k)||""}catch(e){return ""}}
+function ssSet(k,v){try{v?sessionStorage.setItem(k,v):sessionStorage.removeItem(k)}catch(e){}}
+function setSync(t){document.getElementById("syncState").textContent=t}
+let adminKey=ssGet(AKEY);
+function isAdmin(){return !!adminKey}
+
+/* ---------- API (Google Apps Script web app) ---------- */
+async function apiGet(params){
+  const u=new URL(API);Object.entries(params).forEach(([k,v])=>u.searchParams.set(k,v));
+  const r=await fetch(u.toString(),{cache:"no-store"});const j=await r.json();
+  if(!j.ok)throw new Error(j.error||"error del servidor");return j;
+}
+async function apiPost(body){
+  const r=await fetch(API,{method:"POST",body:JSON.stringify(body)}); // text/plain: sin preflight CORS
+  const j=await r.json();if(!j.ok)throw new Error(j.error||"error del servidor");return j;
+}
+async function loadRecords(){
+  try{
+    const j=await apiGet(adminKey?{action:"list",key:adminKey}:{action:"list"});
+    records=j.records||[];mode="db";
+    setSync(`Datos en línea · ${records.length} cartilla(s)`+(isAdmin()?" · modo administrador":""));
+  }catch(e){
+    if(adminKey&&/clave/i.test(e.message||"")){adminKey="";ssSet(AKEY,"");refreshAdminUI();return loadRecords()}
+    if(mode==="loading")mode="db";
+    setSync("Sin conexión con la base de datos. Intente recargar la página.");
+  }
+  renderAll();
+}
+async function initStore(){
+  const pl=document.getElementById("policyLink");
+  if(CFG.politicaDatosUrl)pl.href=CFG.politicaDatosUrl;else pl.removeAttribute("target");
+  refreshAdminUI();
+  if(!API){useLocal();return}
+  mode="loading";await loadRecords();updateStoreNote();
+  setInterval(()=>{if(!document.hidden)loadRecords()},90000);
+}
+function useLocal(){mode="local";records=lsGet(LKEY)||SEED.map(x=>({...x}));setSync("Modo demostración: falta configurar la base de datos (config.js)");updateStoreNote();renderAll()}
+function updateStoreNote(){
+  const el=document.getElementById("storeNote");
+  el.textContent=mode==="local"
+    ?"Modo demostración: la cartilla se guarda solo en este navegador hasta que se configure la base de datos del sitio."
+    :"Al guardar, su cartilla queda registrada en el Observatorio y aparece en la síntesis y los gráficos.";
+}
+async function saveRecord(rec){
+  if(mode!=="local"){
+    const j=await apiPost({action:"create",record:rec});
+    await loadRecords();return j.id;
+  }
+  delete rec.hp;rec.id="L"+Date.now(); records.push(rec); lsSet(LKEY,records); renderAll(); return rec.id;
+}
+async function deleteRecord(id){
+  if(mode!=="local"){await apiPost({action:"delete",id,key:adminKey});await loadRecords();return}
+  records=records.filter(r=>r.id!==id);lsSet(LKEY,records);renderAll();
+}
+
+/* ---------- admin access ---------- */
+function refreshAdminUI(){
+  document.getElementById("adminToggle").parentElement.hidden=isAdmin();
+  document.getElementById("adminTools").classList.toggle("open",isAdmin());
+  if(isAdmin())document.getElementById("adminBox").classList.remove("open");
+}
+function adminMsg(t){document.getElementById("adminMsg").textContent=t||""}
+document.getElementById("adminToggle").addEventListener("click",()=>{const b=document.getElementById("adminBox");b.classList.toggle("open");if(b.classList.contains("open"))document.getElementById("adminKey").focus()});
+async function adminLogin(){
+  const k=document.getElementById("adminKey").value.trim();if(!k)return;
+  if(!API){adminMsg("Primero configure la base de datos en config.js.");return}
+  adminMsg("Verificando…");
+  try{await apiPost({action:"check",key:k});adminKey=k;ssSet(AKEY,k);document.getElementById("adminKey").value="";adminMsg("");refreshAdminUI();await loadRecords()}
+  catch(e){adminMsg("Clave incorrecta.")}
+}
+document.getElementById("adminIn").addEventListener("click",adminLogin);
+document.getElementById("adminKey").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();adminLogin()}});
+document.getElementById("adminOut").addEventListener("click",()=>{adminKey="";ssSet(AKEY,"");refreshAdminUI();adminMsg("");if(API)loadRecords();else renderAll()});
+document.getElementById("csvBtn").addEventListener("click",()=>{
+  const qs=[];["E","T"].forEach(id=>INSTR[id].modulos.forEach(m=>m.q.forEach((q,i)=>{const k=qkey(m.k,i);if(!qs.includes(k))qs.push(k)})));
+  const cols=["id","creado","instrumento","entidad","municipio","tipo","sector","responsable","dependencia","vigencia","fecha","puntaje","nivel","acciones",...qs];
+  const cell=v=>{v=v==null?"":String(v);return /[",;\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
+  const rows=records.map(r=>cols.map(c=>{
+    if(c==="instrumento")return INSTR[r.instrumento]?INSTR[r.instrumento].nombre:r.instrumento;
+    if(c==="nivel")return INSTR[r.instrumento]?INSTR[r.instrumento].niveles[r.nivel]:r.nivel;
+    if(c==="acciones")return (r.acciones||[]).join(" | ");
+    if(qs.includes(c))return r.respuestas?r.respuestas[c]:"";
+    return r[c];
+  }).map(cell).join(","));
+  const blob=new Blob(["﻿"+[cols.join(","),...rows].join("\r\n")],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="observatorio-evaluaciones-"+new Date().toISOString().slice(0,10)+".csv";document.body.appendChild(a);a.click();a.remove();
+});
+
+/* ---------- routing ---------- */
+const ROUTES=["inicio","evaluar","resultados","graficos"];
+function route(){
+  let h=(location.hash||"#inicio").slice(1); if(!ROUTES.includes(h))h="inicio";
+  document.querySelectorAll("[data-view]").forEach(v=>v.hidden=v.id!=="v-"+h);
+  document.querySelectorAll(".nav a").forEach(a=>a.setAttribute("aria-current",a.dataset.r===h?"page":"false"));
+  window.scrollTo(0,0);
+  if(h==="graficos")renderCharts();
+  if(h==="resultados")renderResults();
+}
+window.addEventListener("hashchange",route);
+
+/* ---------- utils ---------- */
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const lvlChip=(ins,l)=>`<span class="lvl" style="--c:${LV_COLORS[l]}">${esc(ins.niveles[l])}</span>`;
+
+/* ---------- inicio: instrument cards ---------- */
+function renderInstrCards(){
+  document.getElementById("instrCards").innerHTML=["E","T"].map(id=>{const ins=INSTR[id];return `<article class="instr">
+   <span class="eyebrow">${esc(ins.publico)}</span><h3 style="font-size:32px;text-transform:uppercase">${esc(ins.nombre)}</h3>
+   <p class="muted">${id==="E"?"Guía de autoevaluación de impacto ambiental para establecimientos turísticos y empresas. Se recomienda repetirla cada 6 meses.":"Guía de autoevaluación de la gestión ambiental del turismo para alcaldías y Gobernación. Cada respuesta de 2 puntos exige soporte verificable; reporte anual con corte al 31 de diciembre."}</p>
+   <div class="mods">${ins.modulos.map(m=>`<span>${m.k} · ${esc(m.t)} ${m.w} %</span>`).join("")}</div>
+   <div><a class="btn small" href="#evaluar" data-go="${id}">Diligenciar</a></div></article>`}).join("");
+  document.querySelectorAll("[data-go]").forEach(a=>a.addEventListener("click",()=>pickInstr(a.dataset.go)));
+}
+
+/* ---------- form ---------- */
+let cur="E";
+const DKEY="equilibrio.borrador.";
+function pickInstr(id){
+  cur=id; document.querySelectorAll("[data-pick]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pick===id));
+  buildForm(); const d=lsGet(DKEY+id); if(d)fillForm(d); liveUpdate();
+}
+document.querySelectorAll("[data-pick]").forEach(b=>b.addEventListener("click",()=>pickInstr(b.dataset.pick)));
+function buildForm(){
+  const ins=INSTR[cur];
+  let h=`<div class="card"><span class="eyebrow">Datos de la ${cur==="E"?"empresa o establecimiento":"entidad"}</span>
+  <div class="fields" style="margin-top:14px">
+   <label class="f">${cur==="E"?"Nombre del establecimiento":"Entidad territorial"}<input type="text" id="f-entidad" required></label>
+   <label class="f">Municipio<input type="text" id="f-municipio"></label>
+   <label class="f">Tipo de ${cur==="E"?"establecimiento":"entidad"}<select id="f-tipo">${ins.tipos.map(t=>`<option>${t}</option>`).join("")}</select></label>
+   <label class="f">Sector<select id="f-sector"><option>${cur==="E"?"Privado":"Público"}</option><option>${cur==="E"?"Público":"Privado"}</option><option>Mixto</option></select></label>
+   ${cur==="T"?`<label class="f">Dependencia responsable<input type="text" id="f-dependencia"></label><label class="f">Vigencia evaluada<input type="text" id="f-vigencia" placeholder="2026"></label>`:""}
+   <label class="f">Responsable / contacto<input type="text" id="f-responsable"></label>
+   <label class="f">Fecha de aplicación<input type="date" id="f-fecha"></label>
+  </div>
+  <p class="prog" style="margin-top:14px">Escala: 0 = ${ins.escala[0]} · 1 = ${ins.escala[1]} · 2 = ${ins.escala[2]}.${cur==="T"?" Regla de evidencia: una respuesta de 2 puntos sin soporte verificable se califica con 1 punto.":""}</p></div>`;
+  ins.modulos.forEach(m=>{
+    h+=`<section class="module" id="mod-${m.k}"><header><span class="code">${m.k}</span><h3>${esc(m.t)}</h3><span class="w">Peso ${m.w} %</span><p>${esc(m.d)}</p></header>`;
+    m.q.forEach((q,i)=>{const k=qkey(m.k,i);
+      h+=`<div class="q" data-q="${k}"><span class="qc">${m.k}.${i+1}</span><span class="qt" data-qt="${k}">${esc(q[0])}</span><span class="tip">Consejo: ${esc(q[1])}</span>
+      <div class="opts" role="radiogroup" aria-label="${m.k}.${i+1}">${[0,1,2].map(v=>`<label class="opt"><input type="radio" name="${k}" value="${v}" id="r-${k}-${v}"><span><i>${v}</i>${esc(ins.escala[v])}</span></label>`).join("")}</div>
+      ${ins.soporte?`<div class="sup"><input type="text" id="s-${k}" data-sup="${k}" placeholder="Soporte: ${esc(q[2])} (n.° o enlace)" aria-label="Soporte ${m.k}.${i+1}"></div>`:""}</div>`});
+    h+=`</section>`;
+  });
+  if(cur==="T"){
+    h+=`<section class="module"><header><span class="code">+</span><h3>Datos del territorio</h3><span class="w">No suman puntaje</span><p>Cifras que el Observatorio publica y compara año a año. Si no existe el dato, escriba “sin dato”.</p></header><div class="scroll" style="padding:12px 20px"><table class="dtable"><thead><tr><th>#</th><th>Dato</th><th>Unidad</th><th>Valor</th><th>Fuente</th></tr></thead><tbody>${ins.datos.map((d,i)=>`<tr><td>${i+1}</td><td>${esc(d[0])}</td><td class="muted">${esc(d[1])}</td><td><input type="text" id="d-v${i}" aria-label="Valor ${esc(d[0])}"></td><td><input type="text" id="d-f${i}" aria-label="Fuente ${esc(d[0])}"></td></tr>`).join("")}</tbody></table></div></section>`;
+  }
+  h+=`<section class="module"><header><span class="code">✓</span><h3>Compromiso</h3><span class="w">Próximos ${cur==="E"?"30":"90"} días</span><p>Seleccione las 3 acciones prioritarias. Las sugerencias cambian según el nivel y los módulos más débiles.</p></header><div style="padding:16px 20px;display:grid;gap:10px">
+   ${[1,2,3].map(i=>`<label class="f">Acción #${i}<input type="text" id="f-acc${i}"></label>`).join("")}
+   <div class="suggest" id="suggest"></div></div></section>`;
+  document.getElementById("formMain").innerHTML=h;
+  document.getElementById("f-tipo").addEventListener("change",swapGob);
+}
+function swapGob(){if(cur!=="T")return;const ins=INSTR.T,tipo=document.getElementById("f-tipo").value;
+  ins.modulos.forEach(m=>m.q.forEach((q,i)=>{const el=document.querySelector(`[data-qt="${qkey(m.k,i)}"]`);if(el)el.textContent=qText(ins,m,i,tipo)}))}
+function readForm(){
+  const ins=INSTR[cur],g=id=>(document.getElementById(id)?.value||"").trim();
+  const rec={instrumento:cur,entidad:g("f-entidad"),municipio:g("f-municipio"),tipo:g("f-tipo"),sector:g("f-sector"),responsable:g("f-responsable"),fecha:g("f-fecha"),respuestas:{},soportes:{},acciones:[g("f-acc1"),g("f-acc2"),g("f-acc3")].filter(Boolean)};
+  if(cur==="T"){rec.dependencia=g("f-dependencia");rec.vigencia=g("f-vigencia");rec.datosTerritorio=ins.datos.map((d,i)=>({dato:d[0],unidad:d[1],valor:g("d-v"+i),fuente:g("d-f"+i)}))}
+  ins.modulos.forEach(m=>m.q.forEach((q,i)=>{const k=qkey(m.k,i);const c=document.querySelector(`input[name="${k}"]:checked`);if(c)rec.respuestas[k]=+c.value;if(ins.soporte){const s=g("s-"+k);if(s)rec.soportes[k]=s}}));
+  return rec;
+}
+function fillForm(d){
+  const set=(id,v)=>{const el=document.getElementById(id);if(el&&v!==undefined)el.value=v};
+  ["entidad","municipio","tipo","sector","responsable","fecha","dependencia","vigencia"].forEach(f=>set("f-"+f,d[f]));
+  (d.acciones||[]).forEach((a,i)=>set("f-acc"+(i+1),a));
+  Object.entries(d.respuestas||{}).forEach(([k,v])=>{const el=document.getElementById(`r-${k}-${v}`);if(el)el.checked=true});
+  Object.entries(d.soportes||{}).forEach(([k,v])=>set("s-"+k,v));
+  (d.datosTerritorio||[]).forEach((x,i)=>{set("d-v"+i,x.valor);set("d-f"+i,x.fuente)});
+  swapGob();
+}
+let draftT;
+function liveUpdate(){
+  const rec=readForm(),ins=INSTR[cur],sc=score(rec);
+  document.getElementById("liveScore").textContent=fmt(sc.total);
+  const lv=document.getElementById("liveLvl");lv.textContent=ins.niveles[sc.level];lv.style.setProperty("--c",LV_COLORS[sc.level]);
+  document.getElementById("liveBars").innerHTML=ins.modulos.map(m=>`<div class="mbar"><b>${m.k}</b><div class="track" title="${esc(m.t)}"><i style="width:${sc.mods[m.k].pct}%"></i></div><span class="num">${sc.mods[m.k].sub}/10</span></div>`).join("");
+  document.getElementById("liveProg").textContent=`${sc.answered} de 30 preguntas respondidas${sc.downgraded?` · ${sc.downgraded} sin soporte (cuentan 1)`:""}`;
+  const plan=ins.plan[sc.level];const weak=ins.modulos.map(m=>({k:m.k,p:sc.mods[m.k].pct})).sort((a,b)=>a.p-b.p).slice(0,3);
+  document.getElementById("suggest").innerHTML=weak.flatMap(w=>plan[w.k].map(a=>`<button type="button" data-sg="${esc(a)}">${w.k} · ${esc(a)}</button>`)).join("");
+  document.querySelectorAll("[data-sg]").forEach(b=>b.addEventListener("click",()=>{for(const i of [1,2,3]){const el=document.getElementById("f-acc"+i);if(!el.value){el.value=b.dataset.sg;break}}saveDraft()}));
+  saveDraft();
+}
+function saveDraft(){clearTimeout(draftT);draftT=setTimeout(()=>lsSet(DKEY+cur,readForm()),400)}
+document.getElementById("evalForm").addEventListener("input",e=>{if(e.target.matches("input[type=radio],[data-sup]")){liveUpdate();e.target.closest(".q")?.classList.remove("missing")}else saveDraft()});
+document.getElementById("evalForm").addEventListener("change",e=>{if(e.target.matches("input[type=radio]"))liveUpdate()});
+document.getElementById("resetBtn").addEventListener("click",()=>{lsSet(DKEY+cur,null);buildForm();liveUpdate();msg("")});
+function msg(t,warn){const el=document.getElementById("saveMsg");el.hidden=!t;el.textContent=t;el.className="notice"+(warn?" warn":"")}
+document.getElementById("evalForm").addEventListener("submit",async e=>{
+  e.preventDefault();const rec=readForm();
+  if(!rec.entidad){msg("Escriba el nombre de la entidad antes de guardar.",true);document.getElementById("f-entidad").focus();return}
+  const missing=[];INSTR[cur].modulos.forEach(m=>m.q.forEach((q,i)=>{const k=qkey(m.k,i);if(rec.respuestas[k]===undefined)missing.push(k)}));
+  document.querySelectorAll(".q.missing").forEach(q=>q.classList.remove("missing"));
+  if(missing.length){missing.forEach(k=>document.querySelector(`[data-q="${k}"]`)?.classList.add("missing"));msg(`Faltan ${missing.length} pregunta(s) por responder; están resaltadas.`,true);document.querySelector(`[data-q="${missing[0]}"]`)?.scrollIntoView({behavior:"smooth",block:"center"});return}
+  const cb=document.getElementById("f-consent");if(!cb.checked){document.getElementById("consentBox").classList.add("missing");msg("Debe autorizar el tratamiento de datos personales para guardar.",true);cb.focus();return}
+  document.getElementById("consentBox").classList.remove("missing");rec.autorizacion=true;rec.hp=document.getElementById("f-web").value;
+  rec.creado=new Date().toISOString();rec.origen="formulario";
+  const sc=score(rec);rec.puntaje=sc.total;rec.nivel=sc.level;
+  const btn=document.getElementById("saveBtn");btn.disabled=true;msg("Guardando…");
+  try{const id=await saveRecord(rec);lsSet(DKEY+cur,null);document.getElementById("f-consent").checked=false;selected=id;msg("Guardada. Abriendo la síntesis…");setTimeout(()=>{location.hash="#resultados";buildForm();liveUpdate();msg("")},500)}
+  catch(err){msg("No se pudo guardar"+(err&&err.message?" ("+err.message+")":"")+". Revise la conexión e intente de nuevo.",true)}
+  finally{btn.disabled=false}
+});
+
+/* ---------- results ---------- */
+let rFilter="all", selected=null, pendingDel=null;
+document.querySelectorAll("#rFilter button").forEach(b=>b.addEventListener("click",()=>{rFilter=b.dataset.f;document.querySelectorAll("#rFilter button").forEach(x=>x.setAttribute("aria-pressed",x===b));renderResults()}));
+function sorted(list){return [...list].sort((a,b)=>score(b).total-score(a).total)}
+function renderResults(){
+  const list=sorted(records.filter(r=>rFilter==="all"||r.instrumento===rFilter));
+  document.getElementById("rCount").textContent=`${list.length} cartilla(s)`;
+  const L=document.getElementById("rList");
+  if(!list.length){L.innerHTML=`<div class="empty" style="grid-column:1/-1"><strong>${mode==="loading"?"Cargando cartillas…":"Aún no hay cartillas guardadas para este filtro."}</strong><span>Cuando una entidad diligencie su autoevaluación, aquí aparecerá su síntesis de comportamiento.</span><a class="btn small" href="#evaluar">Diligenciar la primera</a></div>`;document.getElementById("rDetail").innerHTML="";return}
+  if(!selected||!list.some(r=>r.id===selected))selected=list[0].id;
+  L.innerHTML=list.map(r=>{const ins=INSTR[r.instrumento],sc=score(r);return `<button class="rcard" data-id="${esc(r.id)}" aria-current="${r.id===selected}">
+    <span class="meta">${esc(ins.nombre)} · ${esc(r.tipo||"")}</span><span class="t">${esc(r.entidad)}</span>
+    <span class="meta">${esc(r.municipio||"")}${r.fecha?" · "+esc(r.fecha):""}</span>
+    <div class="row"><span class="pts num">${fmt(sc.total)}</span>${lvlChip(ins,sc.level)}</div>
+    <div class="spark" aria-hidden="true">${MODS.map(k=>`<i style="height:${Math.max(4,sc.mods[k].pct)}%" title="${k}"></i>`).join("")}</div></button>`}).join("");
+  L.querySelectorAll(".rcard").forEach(c=>c.addEventListener("click",()=>{selected=c.dataset.id;pendingDel=null;renderResults();document.getElementById("rDetail").scrollIntoView({behavior:"smooth"})}));
+  renderDetail(records.find(r=>r.id===selected));
+}
+function renderDetail(r){
+  const ins=INSTR[r.instrumento],S=synthesize(r),sc=S.sc;
+  const avg=avgMods(r.instrumento);
+  const li=a=>a.length?`<ul class="list">${a.map(x=>`<li><b>${x.k}</b><span>${esc(x.t)}</span></li>`).join("")}</ul>`:`<p class="muted">Ninguna.</p>`;
+  document.getElementById("rDetail").innerHTML=`<div class="detail">
+   <div class="sum">
+    <div class="persona"><span class="eyebrow">Comportamiento ambiental</span><h3>${esc(S.perfil)}</h3><p>${esc(S.desc)}</p><p>${S.conducta.map(esc).join(" ")}</p></div>
+    ${S.alerts.length?`<div style="display:grid;gap:8px"><span class="eyebrow" style="color:var(--clay)">Riesgos normativos</span>${S.alerts.map(a=>`<div class="flag">${esc(a)}</div>`).join("")}</div>`:""}
+    <div class="cols">
+     <div class="card" style="display:grid;gap:10px"><span class="eyebrow">Brechas · no existe (${S.gaps.length})</span>${li(S.gaps)}</div>
+     <div class="card" style="display:grid;gap:10px"><span class="eyebrow">A medio camino · en proceso (${S.partial.length})</span>${li(S.partial)}</div>
+    </div>
+    <div class="card" style="display:grid;gap:10px"><span class="eyebrow">Acciones recomendadas para su nivel</span>
+      <ul class="list">${S.recs.map(x=>`<li><b>${x.m}</b><span>${esc(x.a)} <span class="muted">(${esc(x.t)})</span></span></li>`).join("")}</ul>
+      ${r.acciones?.length?`<span class="eyebrow" style="margin-top:8px">Compromisos registrados por la entidad</span><ul class="list">${r.acciones.map((a,i)=>`<li><b>#${i+1}</b><span>${esc(a)}</span></li>`).join("")}</ul>`:""}
+    </div>
+    <details class="card"><summary style="cursor:pointer;font-weight:700">Ver las ${S.strong.length} prácticas consolidadas</summary><div style="margin-top:10px">${li(S.strong)}</div></details>
+   </div>
+   <aside class="sum">
+    <div class="card" style="display:grid;gap:12px">
+      <span class="eyebrow">${esc(ins.nombre)}</span>
+      <h3 style="font-size:30px;text-transform:uppercase">${esc(r.entidad)}</h3>
+      <span class="muted" style="font-size:14px">${[r.tipo,r.municipio,r.sector,r.responsable&&("Responsable: "+r.responsable),r.fecha&&("Aplicada: "+r.fecha)].filter(Boolean).map(esc).join(" · ")}</span>
+      <div><span class="score-big num">${fmt(sc.total)}</span><span class="muted"> / 100</span></div>${lvlChip(ins,sc.level)}
+      ${radarSVG(ins,sc,avg)}
+      <div class="legend"><span style="--c:var(--leaf)"><i></i>Esta entidad</span><span style="--c:var(--gray-mid)"><i></i>Promedio del instrumento</span></div>
+      <table class="dtable num"><thead><tr><th>Módulo</th><th>Subtotal</th><th>Ponderado</th></tr></thead><tbody>${ins.modulos.map(m=>`<tr><td>${m.k} · ${esc(m.t)}</td><td>${sc.mods[m.k].sub}/10</td><td>${fmt(sc.mods[m.k].pts)}</td></tr>`).join("")}</tbody></table>
+      ${r.origen==="cartilla"?`<p class="prog">Transcrita de la cartilla en PDF aportada.</p>`:""}
+      <div id="delZone">${(mode==="local"||isAdmin())?`<button class="btn ghost small" type="button" id="delBtn">Eliminar cartilla</button>`:""}</div>
+    </div>
+   </aside></div>`;
+  const z=document.getElementById("delZone");
+  z?.addEventListener("click",async e=>{
+    if(e.target.id==="delBtn"){z.innerHTML=`<div class="confirm"><span>¿Eliminar esta cartilla para todos?</span><button class="btn danger small" type="button" id="delYes">Eliminar</button><button class="btn ghost small" type="button" id="delNo">Cancelar</button></div>`}
+    else if(e.target.id==="delNo"){renderDetail(r)}
+    else if(e.target.id==="delYes"){try{await deleteRecord(r.id);selected=null}catch(err){z.innerHTML=`<p class="prog">No se pudo eliminar: ${esc(err&&err.message||"error")}</p>`}}
+  });
+}
+function avgMods(id){const list=records.filter(r=>r.instrumento===id);const o={};MODS.forEach(k=>o[k]=list.length?list.reduce((s,r)=>s+score(r).mods[k].pct,0)/list.length:0);return o}
+
+/* ---------- charts ---------- */
+function radarSVG(ins,sc,avg){
+  const W=300,H=270,cx=150,cy=135,R=95,n=6;
+  const pt=(i,p)=>{const a=-Math.PI/2+i*2*Math.PI/n;return [cx+Math.cos(a)*R*p/100,cy+Math.sin(a)*R*p/100]};
+  let g="";[25,50,75,100].forEach(p=>{g+=`<polygon points="${MODS.map((k,i)=>pt(i,p).join(",")).join(" ")}" fill="none" stroke="var(--line)" stroke-width="1"/>`});
+  MODS.forEach((k,i)=>{const [x,y]=pt(i,100);g+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="var(--line)"/>`;const [lx,ly]=pt(i,122);g+=`<text x="${lx}" y="${ly+4}" text-anchor="middle" class="ink">${k}</text>`});
+  const poly=(o,f)=>MODS.map((k,i)=>pt(i,f(k)).join(",")).join(" ");
+  g+=`<polygon points="${poly(avg,k=>avg[k])}" fill="none" stroke="var(--gray-mid)" stroke-width="2" stroke-dasharray="4 3"/>`;
+  g+=`<polygon points="${poly(sc,k=>sc.mods[k].pct)}" fill="var(--leaf)" fill-opacity=".22" stroke="var(--leaf)" stroke-width="2"/>`;
+  MODS.forEach((k,i)=>{const [x,y]=pt(i,sc.mods[k].pct);const m=ins.modulos[i];g+=`<circle cx="${x}" cy="${y}" r="5" fill="var(--leaf)" stroke="var(--surface)" stroke-width="2" data-tip="${esc(m.k+" · "+m.t)}: ${sc.mods[k].pct} % (promedio ${Math.round(avg[k])} %)"/>`});
+  [50,100].forEach(p=>{const [x,y]=pt(0,p);g+=`<text x="${x+4}" y="${y+12}" font-size="10">${p}</text>`});
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Radar de módulos">${g}</svg>`;
+}
+let gF="E";
+document.querySelectorAll("#gFilter button").forEach(b=>b.addEventListener("click",()=>{gF=b.dataset.f;document.querySelectorAll("#gFilter button").forEach(x=>x.setAttribute("aria-pressed",x===b));renderCharts()}));
+function renderCharts(){
+  const ins=INSTR[gF],list=sorted(records.filter(r=>r.instrumento===gF)),scs=list.map(score);
+  const avg=scs.length?scs.reduce((s,x)=>s+x.total,0)/scs.length:0;
+  const lvCount=[0,0,0,0];scs.forEach(s=>lvCount[s.level]++);
+  const modAvg=avgMods(gF);const worstM=ins.modulos.slice().sort((a,b)=>modAvg[a.k]-modAvg[b.k])[0];
+  document.getElementById("kpis").innerHTML=`
+   <div class="kpi"><span>Cartillas</span><b class="num">${list.length}</b><small>${esc(ins.nombre)}</small></div>
+   <div class="kpi"><span>Puntaje promedio</span><b class="num">${list.length?fmt(avg):"–"}</b><small>${list.length?esc(ins.niveles[levelOf(avg)]):"sin datos"}</small></div>
+   <div class="kpi"><span>Nivel más frecuente</span><b style="font-size:30px">${list.length?esc(ins.niveles[lvCount.indexOf(Math.max(...lvCount))]):"–"}</b><small>${lvCount.map((c,i)=>`${c} ${["semilla","en camino","líder","referente"][i]}`).join(" · ")}</small></div>
+   <div class="kpi"><span>Módulo más débil</span><b>${list.length?worstM.k:"–"}</b><small>${list.length?`${esc(worstM.t)} · ${Math.round(modAvg[worstM.k])} %`:"sin datos"}</small></div>`;
+  const C=document.getElementById("charts");
+  if(!list.length){C.innerHTML=`<div class="empty" style="grid-column:1/-1"><strong>${mode==="loading"?"Cargando datos…":"Todavía no hay cartillas de este instrumento."}</strong><span>Los gráficos se construyen con cada autoevaluación guardada.</span><a class="btn small" href="#evaluar">Diligenciar cartilla</a></div>`;renderSynth();return}
+  C.innerHTML=`
+   <div class="chart wide"><h3>Puntaje total por entidad</h3><p class="sub">Huella Verde de 0 a 100; las líneas marcan los cortes de nivel (30, 60 y 85).</p>${barsSVG(ins,list,scs)}
+    <div class="legend">${ins.niveles.map((n,i)=>`<span style="--c:${LV_COLORS[i]}"><i></i>${esc(n)} (${LV_RANGES[i]})</span>`).join("")}</div></div>
+   <div class="chart wide"><h3>Desempeño por módulo</h3><p class="sub">Porcentaje alcanzado en cada dimensión. Más oscuro, mejor gestión.</p><div class="scroll">${heatTable(ins,list,scs,modAvg)}</div></div>
+   <div class="chart"><h3>Promedio por módulo</h3><p class="sub">Media de todas las cartillas, en % del máximo del módulo.</p>${modBarsSVG(ins,modAvg)}</div>
+   <div class="chart"><h3>Distribución de niveles</h3><p class="sub">Cuántas entidades hay en cada nivel de desempeño.</p>${levelSVG(ins,lvCount)}</div>
+   <div class="chart wide"><h3>Respuestas por pregunta</h3><p class="sub">Proporción de entidades que respondió 0, 1 o 2 en cada indicador${ins.soporte?" (aplicada la regla de evidencia)":""}. Pase el cursor para ver la pregunta.</p>
+    <div class="legend"><span style="--c:var(--clay)"><i></i>0 · ${esc(ins.escala[0])}</span><span style="--c:var(--gray-mid)"><i></i>1 · ${esc(ins.escala[1])}</span><span style="--c:var(--leaf)"><i></i>2 · ${esc(ins.escala[2])}</span></div>
+    <div class="scroll">${qDistSVG(ins,list)}</div></div>`;
+  renderSynth();
+}
+function barsSVG(ins,list,scs){
+  const rowH=34,L=180,W=760,Rpad=60,top=22,h=top+list.length*rowH+10,x=v=>L+(W-L-Rpad)*v/100;
+  let g="";[0,30,60,85,100].forEach(v=>{g+=`<line x1="${x(v)}" x2="${x(v)}" y1="${top-6}" y2="${h-6}" stroke="var(--line)" ${v&&v<100?'stroke-dasharray="3 3"':""}/><text x="${x(v)}" y="12" text-anchor="middle">${v}</text>`});
+  list.forEach((r,i)=>{const s=scs[i],y=top+i*rowH;const name=r.entidad.length>24?r.entidad.slice(0,23)+"…":r.entidad;
+    g+=`<text x="${L-10}" y="${y+rowH/2+4}" text-anchor="end" class="ink">${esc(name)}</text>
+    <rect x="${L}" y="${y+7}" width="${Math.max(2,x(s.total)-L)}" height="${rowH-14}" rx="4" fill="${LV_COLORS[s.level]}" data-tip="${esc(r.entidad)} · ${fmt(s.total)} puntos · ${esc(ins.niveles[s.level])}"/>
+    <text x="${x(s.total)+6}" y="${y+rowH/2+4}" class="ink num">${fmt(s.total)}</text>`});
+  return `<svg viewBox="0 0 ${W} ${h}" role="img" aria-label="Puntaje total por entidad">${g}</svg>`;
+}
+function heatTable(ins,list,scs,modAvg){
+  const cell=p=>{const a=.08+.82*p/100;return `<td style="background:rgba(var(--heat),${a.toFixed(2)});color:${p>=55?"#fff":"var(--ink)"}" data-tip="${p} %">${p}</td>`};
+  return `<table class="heat"><thead><tr><th>Entidad</th>${ins.modulos.map(m=>`<th class="m" title="${esc(m.t)}">${m.k} · ${esc(m.t.split(" ")[0])}</th>`).join("")}<th class="m">Total</th></tr></thead><tbody>
+   ${list.map((r,i)=>`<tr><th>${esc(r.entidad)}</th>${MODS.map(k=>cell(scs[i].mods[k].pct)).join("")}<td class="num">${fmt(scs[i].total)}</td></tr>`).join("")}
+   <tr><th>Promedio</th>${MODS.map(k=>cell(Math.round(modAvg[k]))).join("")}<td class="num">${fmt(scs.reduce((s,x)=>s+x.total,0)/scs.length)}</td></tr></tbody></table>`;
+}
+function modBarsSVG(ins,modAvg){
+  const W=420,H=240,L=30,B=200,bw=44,gap=(W-L-6*bw)/6;let g="";
+  [0,50,100].forEach(v=>{const y=B-v*1.7;g+=`<line x1="${L}" x2="${W}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${L-6}" y="${y+4}" text-anchor="end">${v}</text>`});
+  ins.modulos.forEach((m,i)=>{const v=modAvg[m.k],x=L+gap/2+i*(bw+gap),hh=v*1.7;
+    g+=`<path d="M${x},${B} V${B-hh+4} q0,-4 4,-4 h${bw-8} q4,0 4,4 V${B} Z" fill="var(--leaf)" data-tip="${esc(m.k+" · "+m.t)}: ${Math.round(v)} %"/><text x="${x+bw/2}" y="${B-hh-6}" text-anchor="middle" class="ink">${Math.round(v)}</text><text x="${x+bw/2}" y="${B+18}" text-anchor="middle">${m.k}</text>`});
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Promedio por módulo">${g}</svg><p class="sub">${ins.modulos.map(m=>`${m.k}: ${esc(m.t)}`).join(" · ")}</p>`;
+}
+function levelSVG(ins,c){
+  const W=420,rowH=44,L=150,max=Math.max(1,...c);let g="";
+  ins.niveles.forEach((n,i)=>{const y=8+i*rowH,w=(W-L-40)*c[i]/max;
+    g+=`<text x="${L-10}" y="${y+rowH/2+4}" text-anchor="end" class="ink">${esc(n)}</text><rect x="${L}" y="${y+8}" width="${Math.max(c[i]?4:0,w)}" height="${rowH-16}" rx="4" fill="${LV_COLORS[i]}" data-tip="${esc(n)}: ${c[i]} entidad(es)"/><text x="${L+w+8}" y="${y+rowH/2+4}" class="ink">${c[i]}</text>`});
+  return `<svg viewBox="0 0 ${W} ${8+4*rowH}" role="img" aria-label="Distribución de niveles">${g}</svg>`;
+}
+function qDistSVG(ins,list){
+  const W=760,L=50,R=10,rowH=20,top=8;let g="",i=0;
+  ins.modulos.forEach(m=>m.q.forEach((q,qi)=>{const k=qkey(m.k,qi);const c=[0,0,0];let n=0;list.forEach(r=>{const v=eff(r,k);if(v!==null){c[v]++;n++}});
+    const y=top+i*rowH;let x=L;const tw=W-L-R;
+    g+=`<text x="${L-8}" y="${y+rowH/2+4}" text-anchor="end" class="${qi===0?"ink":""}">${m.k}.${qi+1}</text>`;
+    [0,1,2].forEach(v=>{const w=n?tw*c[v]/n:0;if(w>0){g+=`<rect x="${x+ (x>L?1:0)}" y="${y+3}" width="${Math.max(0,w-(x>L?1:0)-(v<2?1:0))}" height="${rowH-6}" rx="3" fill="${["var(--clay)","var(--gray-mid)","var(--leaf)"][v]}" data-tip="${esc(m.k+"."+(qi+1)+" "+qText(ins,m,qi))} — ${ins.escala[v]}: ${c[v]} de ${n}"/>`;x+=w}});
+    i++}));
+  return `<svg viewBox="0 0 ${W} ${top+i*rowH+6}" role="img" aria-label="Distribución de respuestas por pregunta" style="min-width:560px">${g}</svg>`;
+}
+
+/* ---------- synthesis of the three cartillas ---------- */
+function renderSynth(){
+  document.getElementById("synth3").innerHTML=`
+   <article class="card"><span class="eyebrow">Cartilla 1 · Instrumento base</span><h3>Huella Verde · establecimientos</h3>
+    <p>Guía de CORPOCALDAS (v1.0, 2025) para hoteles, posadas, fincas, restaurantes, agencias y operadores del departamento. Seis módulos con pesos 20-20-20-15-15-10, escala 0-1-2 y cuatro niveles: Semilla, En Camino Verde, Líder y Referente.</p>
+    <ul><li>Se basa en ISO 14001, GRI 300 y NTS-TS 002.</li><li>Referentes: Hacienda Venecia, Parque Arví, CST Costa Rica.</li><li>Recomienda repetirla cada 6 meses con un plan de 3 acciones a 30 días.</li></ul>
+    <p class="muted">Aportada diligenciada por Hacienda Charrascal · Fogón de Palo (Manizales, 6 de octubre de 2026).</p></article>
+   <article class="card"><span class="eyebrow">Cartilla 2 · Caso diligenciado</span><h3>Cartilla ambiental diligenciada</h3>
+    <p>Segunda aplicación del mismo instrumento, por Hacienda El Bosque SAS (alojamiento rural, Manizales). Permite comparar dos empresas con la misma escala.</p>
+    <ul><li>Resultado de 77 / 100, nivel Líder Ambiental.</li><li>Biodiversidad y comunidad en el máximo (10/10).</li><li>Su menor puntaje está en gestión del agua (5/10): no mide consumo ni tiene protocolos de ahorro.</li></ul>
+    <p class="muted">Transcrita desde el PDF escaneado; no registra fecha ni acciones de compromiso.</p></article>
+   <article class="card"><span class="eyebrow">Cartilla 3 · Escala territorial</span><h3>Huella Verde Territorial</h3>
+    <p>Versión para alcaldías y Gobernación (v1.0, 2026) de la Mesa de Gobernanza Ambiental Turística. Misma escala y niveles, pero evalúa planeación, saneamiento, gobernanza y datos del territorio.</p>
+    <ul><li>Pesos 20-20-15-15-20-10: suben planificación y gobernanza.</li><li>Regla de evidencia: un 2 sin soporte vale 1.</li><li>Agrega 12 datos del territorio para el Observatorio y una versión de preguntas para la Gobernación.</li><li>Ciclo anual: la entidad reporta, CORPOCALDAS valida en 15 días hábiles y el Observatorio publica.</li></ul></article>`;
+  const E=records.filter(r=>r.instrumento==="E"), T=records.filter(r=>r.instrumento==="T");
+  const el=document.getElementById("synthCompare");
+  if(!E.length&&!T.length){el.innerHTML=`<span class="eyebrow">Síntesis de los datos</span><p class="muted">La comparación aparecerá cuando haya cartillas guardadas.</p>`;return}
+  let common=[],html=`<span class="eyebrow">Síntesis de los datos guardados</span>`;
+  if(E.length){
+    const ins=INSTR.E,avg=avgMods("E");
+    const qAvg=[];ins.modulos.forEach(m=>m.q.forEach((q,i)=>{const k=qkey(m.k,i);const vals=E.map(r=>eff(r,k)).filter(v=>v!==null);if(vals.length)qAvg.push({k:m.k+"."+(i+1),t:q[0],v:vals.reduce((a,b)=>a+b,0)/vals.length})}));
+    common=qAvg.filter(q=>q.v<=1).sort((a,b)=>a.v-b.v);
+    const ranked=ins.modulos.slice().sort((a,b)=>avg[b.k]-avg[a.k]);
+    const sc=E.map(score),mean=sc.reduce((s,x)=>s+x.total,0)/sc.length;
+    html+=`<h3 style="font-size:26px;text-transform:uppercase">Establecimientos (${E.length})</h3>
+     <p>El promedio es de <strong>${fmt(mean)}</strong> puntos (${esc(ins.niveles[levelOf(mean)])}). El sector muestra su mejor comportamiento en <strong>${esc(ranked[0].t.toLowerCase())}</strong> (${Math.round(avg[ranked[0].k])} %) y en <strong>${esc(ranked[1].t.toLowerCase())}</strong> (${Math.round(avg[ranked[1].k])} %), y su principal rezago en <strong>${esc(ranked[5].t.toLowerCase())}</strong> (${Math.round(avg[ranked[5].k])} %).${["D","F"].includes(ranked[0].k)&&!["D","F"].includes(ranked[5].k)?" Las empresas cuidan el entorno visible para el visitante y su relación con la comunidad, pero la gestión operativa (medir consumos, eficiencia energética, compostaje y compras verdes) sigue a medio camino.":""}</p>
+     ${common.length?`<p><strong>Prácticas que ninguna o pocas empresas tienen consolidadas</strong> (promedio de 1 punto o menos):</p><ul class="list">${common.slice(0,8).map(q=>`<li><b>${q.k}</b><span>${esc(q.t)} <span class="muted">· promedio ${fmt(q.v)}</span></span></li>`).join("")}</ul>`:""}`;
+  }
+  if(T.length){const sc=T.map(score),mean=sc.reduce((s,x)=>s+x.total,0)/sc.length;html+=`<h3 style="font-size:26px;text-transform:uppercase;margin-top:8px">Entidades territoriales (${T.length})</h3><p>Promedio de <strong>${fmt(mean)}</strong> puntos (${esc(INSTR.T.niveles[levelOf(mean)])}).</p>`}
+  else html+=`<p class="muted">Aún no hay cartillas territoriales guardadas: el instrumento está listo en la pestaña Autoevaluar para alcaldías y la Gobernación. Cuando se diligencie, el Observatorio podrá comparar el nivel de cada municipio con el de sus establecimientos (pregunta E.3 de la versión territorial).</p>`;
+  el.innerHTML=html;
+}
+
+/* ---------- tooltip ---------- */
+const tip=document.getElementById("tip");
+document.addEventListener("mousemove",e=>{const t=e.target.closest?.("[data-tip]");if(!t){tip.hidden=true;return}tip.textContent=t.getAttribute("data-tip");tip.hidden=false;const x=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8),y=e.clientY+16+tip.offsetHeight>innerHeight?e.clientY-tip.offsetHeight-10:e.clientY+16;tip.style.left=x+"px";tip.style.top=y+"px"});
+
+function renderAll(){const h=(location.hash||"#inicio").slice(1);if(h==="resultados")renderResults();if(h==="graficos")renderCharts()}
+
+
+/* ---------- ejes del observatorio ---------- */
+const EJES=[
+ ["Biodiversidad","#9ccc3c",'<path d="M12 21v-8"/><path d="M12 13c-4 0-6-3-6-7 4 0 6 3 6 7z"/><path d="M12 13c4 0 6-3 6-7-4 0-6 3-6 7z"/><path d="M8 21h8"/>',"#resultados"],
+ ["Destinos sostenibles","#369dd7",'<path d="M12 21s-6-6.2-6-11a6 6 0 0 1 12 0c0 4.8-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/>',"#evaluar"],
+ ["Visitantes y territorio","#e3a21a",'<circle cx="12" cy="8" r="3"/><circle cx="5.5" cy="10" r="2.2"/><circle cx="18.5" cy="10" r="2.2"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0"/><path d="M2 19a3.6 3.6 0 0 1 4-3.4M22 19a3.6 3.6 0 0 0-4-3.4"/>',"#evaluar"],
+ ["Información y análisis","#369dd7",'<rect x="4" y="12" width="4" height="8" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="4" width="4" height="16" rx="1"/>',"#graficos"],
+ ["Sostenibilidad","#9ccc3c",'<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/>',"#inicio-normativa"],
+ ["Innovación turística","#e3a21a",'<circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="4" r="1.6"/><circle cx="12" cy="20" r="1.6"/><circle cx="5" cy="8" r="1.6"/><circle cx="19" cy="8" r="1.6"/><circle cx="5" cy="16" r="1.6"/><circle cx="19" cy="16" r="1.6"/><path d="M12 5.6v4M12 14.5v3.9M6.4 8.8l3.4 2M17.6 8.8l-3.4 2M6.4 15.2l3.4-2M17.6 15.2l-3.4-2"/>',"#graficos"]];
+if(document.getElementById("ejes"))document.getElementById("ejes").innerHTML=EJES.map(([t,c,p,h])=>`<a class="eje" href="${h==="#inicio-normativa"?"#inicio":h}" style="--c:${c}" ${h==="#inicio-normativa"?'data-scroll="normativa"':""}><span class="ring"><svg viewBox="0 0 24 24" aria-hidden="true">${p}</svg></span>${t}</a>`).join("");
+document.querySelector('[data-scroll="normativa"]')?.addEventListener("click",e=>{e.preventDefault();document.getElementById("normativa")?.scrollIntoView({behavior:"smooth"})});
+/* ---------- boot ---------- */
+renderInstrCards();
+pickInstr("E");
+route();
+setTimeout(initStore,0);
+</script>
+
+</body></html>
