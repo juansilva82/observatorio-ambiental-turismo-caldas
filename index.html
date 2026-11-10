@@ -274,6 +274,15 @@ textarea{min-height:64px;resize:vertical}
 .cf-sources{font-size:14px;display:grid;gap:6px;margin:0;padding-left:20px}
 .cf-note{border-left:4px solid var(--gold);background:var(--surface);padding:12px 16px;border-radius:0 12px 12px 0;font-size:14.5px}
 
+
+/* corpocaldas */
+.corpo-top{height:52px;width:auto;margin-left:6px}
+@media (max-width:760px){.corpo-top{height:40px}}
+.corpo-badge{display:inline-flex;justify-self:start;background:#fff;border-radius:12px;padding:8px 12px;box-shadow:0 4px 14px rgba(0,0,0,.18);line-height:0}
+.corpo-badge img{height:44px;width:auto}
+.corpo-badge.big{justify-self:center;padding:10px 16px;border-radius:14px}
+.corpo-badge.big img{height:72px}
+footer .corpo-badge img{height:52px}
 /* atractivos */
 .at-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 @media (max-width:860px){.at-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -385,6 +394,7 @@ footer a{color:var(--leaf-bright)}
       <span class="sep" aria-hidden="true"></span>
       <span><b>Observatorio Ambiental<br>de Turismo · Caldas</b><small>Autodiagnóstico Huella Verde</small></span>
     </a>
+    <img class="corpo-top" src="img/corpocaldas.png" alt="Corpocaldas · Corporación Autónoma Regional de Caldas" width="85" height="58">
     <nav class="nav" aria-label="Secciones">
       <a href="#inicio" data-r="inicio">Inicio</a>
       <a href="#evaluar" data-r="evaluar">Autoevaluar</a>
@@ -402,6 +412,7 @@ footer a{color:var(--leaf-bright)}
   <section class="hero">
     <h1 class="sr">Observatorio Ambiental de Turismo Caldas</h1>
     <div class="hero2" style="--himg:url(img/01-ddaccdf873.jpg)"><div class="wrap">
+      <span class="corpo-badge big"><img src="img/corpocaldas.png" alt="Corpocaldas · Corporación Autónoma Regional de Caldas" width="150" height="102"></span>
       <p class="h-title"><span class="h-big">Observatorio</span><span class="h-mid"><em>Ambiental</em> de Turismo</span><span class="h-small">Caldas</span></p>
       <p class="h-tag">Conocimiento para un turismo que conserva y genera bienestar</p>
       <div class="ejes" id="ejes"></div>
@@ -540,6 +551,7 @@ footer a{color:var(--leaf-bright)}
 <!-- ================= EVALUAR ================= -->
 <div id="v-evaluar" data-view hidden>
   <div class="vhead" style="--vimg:url(img/08-c1553e7094.jpg)"><div class="wrap">
+    <span class="corpo-badge"><img src="img/corpocaldas.png" alt="Corpocaldas" width="82" height="56"></span>
     <span class="eyebrow">Autoevaluación</span>
     <h1>Diligenciar la cartilla</h1>
     <p>Elija el instrumento, registre los datos de la entidad y marque la opción que describe la situación actual, no la deseada. El puntaje se calcula mientras responde.</p>
@@ -574,6 +586,7 @@ footer a{color:var(--leaf-bright)}
 <!-- ================= RESULTADOS ================= -->
 <div id="v-resultados" data-view hidden>
   <div class="vhead" style="--vimg:url(img/14-8efc00e124.jpg)"><div class="wrap">
+    <span class="corpo-badge"><img src="img/corpocaldas.png" alt="Corpocaldas" width="82" height="56"></span>
     <span class="eyebrow">Síntesis por entidad</span>
     <h1>Comportamiento ambiental</h1>
     <p>Cada tarjeta es una cartilla diligenciada. Seleccione una para ver su perfil de comportamiento, sus fortalezas, brechas, riesgos normativos y acciones prioritarias.</p>
@@ -595,6 +608,7 @@ footer a{color:var(--leaf-bright)}
 <!-- ================= GRAFICOS ================= -->
 <div id="v-graficos" data-view hidden>
   <div class="vhead" style="--vimg:url(img/11-a696d7d6a8.jpg)"><div class="wrap">
+    <span class="corpo-badge"><img src="img/corpocaldas.png" alt="Corpocaldas" width="82" height="56"></span>
     <span class="eyebrow">Observatorio</span>
     <h1>Observatorio en cifras</h1>
     <p>Resultados agregados de todas las cartillas guardadas y síntesis de las tres cartillas aportadas.</p>
@@ -618,6 +632,7 @@ footer a{color:var(--leaf-bright)}
 
 <div id="v-cifras" data-view hidden>
   <div class="vhead" style="--vimg:url(img/01-ddaccdf873.jpg)"><div class="wrap">
+    <span class="corpo-badge"><img src="img/corpocaldas.png" alt="Corpocaldas" width="82" height="56"></span>
     <span class="eyebrow">Turismo ambiental en cifras</span>
     <h1>El patrimonio natural que sostiene el turismo de Caldas</h1>
     <p>Datos públicos sobre áreas protegidas, biodiversidad, visitantes y ocupación. Cada cifra indica su fuente y su fecha; se actualizarán con los reportes institucionales del Observatorio.</p>
@@ -707,7 +722,8 @@ footer a{color:var(--leaf-bright)}
   </div>
 </div>
 <div id="v-atractivos" data-view hidden>
-  <div class="vhead" style="--vimg:url(img/at-paramo.jpg)"><div class="wrap">
+  <div class="vhead" style="--vimg:url(img/at-bosque-tucancito.jpg)"><div class="wrap">
+    <span class="corpo-badge"><img src="img/corpocaldas.png" alt="Corpocaldas" width="82" height="56"></span>
     <span class="eyebrow">Atractivos turísticos ambientales</span>
     <h1>Caldas para vivir la naturaleza</h1>
     <p>Aviturismo, alta montaña, termalismo, senderos entre palmas de cera y ríos del Magdalena Caldense. Un inventario inicial construido con fuentes públicas, que el Observatorio irá ampliando con los prestadores y municipios.</p>
@@ -728,7 +744,7 @@ footer a{color:var(--leaf-bright)}
 </main>
 
 <footer><div class="wrap">
-  <span style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><span>Observatorio Ambiental de Turismo Caldas · Autodiagnóstico ambiental para el turismo sostenible.<br>Instrumentos basados en las cartillas HUELLA VERDE y HUELLA VERDE TERRITORIAL de CORPOCALDAS.</span></span>
+  <span style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><span class="corpo-badge"><img src="img/corpocaldas.png" alt="Corpocaldas · Corporación Autónoma Regional de Caldas" width="100" height="68"></span><span>Observatorio Ambiental de Turismo Caldas · Autodiagnóstico ambiental para el turismo sostenible.<br>Instrumentos basados en las cartillas HUELLA VERDE y HUELLA VERDE TERRITORIAL de CORPOCALDAS.</span></span>
   <span style="display:grid;gap:8px;justify-items:end"><span id="syncState">Conectando con el almacenamiento…</span><span><button type="button" class="linkbtn" id="adminToggle">Acceso administrador</button></span><span class="admin" id="adminBox"><input type="password" id="adminKey" placeholder="Clave de administrador" autocomplete="current-password"><button type="button" class="btn small" id="adminIn">Entrar</button></span><span class="admin" id="adminTools"><button type="button" class="btn small" id="csvBtn">Descargar CSV</button><button type="button" class="btn ghost small" id="adminOut" style="color:#fff">Salir</button></span><span id="adminMsg" class="statusbar"></span></span>
 </div></footer>
 <div id="tip" hidden></div>
