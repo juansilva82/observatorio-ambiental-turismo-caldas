@@ -12,7 +12,10 @@
 <meta name="theme-color" content="#0d2f28">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script src="config.js"></script>
-<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<script src="mapa-caldas.js"></script>
+<script src="territorio.js"></script>
+<style>:root{
+  --sq1:#e6f0d8; --sq2:#c4dca0; --sq3:#94b86a; --sq4:#5f8a36; --sq5:#355c1c; --nod:#e2e7e4; --vec:#eef2ef; --cafe1:#8a5a2b; --cafe2:#d8b98f;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <style>
@@ -31,6 +34,7 @@
   --shadow:0 1px 2px rgba(12,53,39,.06),0 8px 24px rgba(12,53,39,.06);
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --sq1:#1f3a26; --sq2:#2f5a32; --sq3:#4b7f3c; --sq4:#74a84c; --sq5:#a8d47a; --nod:#24332e; --vec:#12241f; --cafe1:#d29a5c; --cafe2:#6b4d2c;
   --bg:#091512; --surface:#0f211c; --surface-2:#153029; --ink:#e5f0ea; --muted:#a2bab0; --line:#24403a;
   --forest:#08201b; --forest-2:#0f3a31; --on-forest:#f2f8f4; --on-forest-muted:#aac8bb;
   --leaf:#9ccc3c; --leaf-ink:#0a1a12; --leaf-bright:#a9d652; --leaf-soft:#1c3622;
@@ -40,6 +44,7 @@
   --lv0:#e0694a; --lv1:#e6aa1f; --lv2:#8ab64c; --lv3:#4aa8e0; --heat:74,168,224;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
 :root[data-theme="dark"]{
+  --sq1:#1f3a26; --sq2:#2f5a32; --sq3:#4b7f3c; --sq4:#74a84c; --sq5:#a8d47a; --nod:#24332e; --vec:#12241f; --cafe1:#d29a5c; --cafe2:#6b4d2c;
   --bg:#091512; --surface:#0f211c; --surface-2:#153029; --ink:#e5f0ea; --muted:#a2bab0; --line:#24403a;
   --forest:#08201b; --forest-2:#0f3a31; --on-forest:#f2f8f4; --on-forest-muted:#aac8bb;
   --leaf:#9ccc3c; --leaf-ink:#0a1a12; --leaf-bright:#a9d652; --leaf-soft:#1c3622;
@@ -155,6 +160,43 @@ section.band.alt{background:var(--surface)}
 .law .tag{font:700 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .law strong{font:700 20px/1.15 var(--display)}
 .law p{font-size:15px;color:var(--muted)}
+
+/* ===== Mapa del Observatorio ===== */
+.mp-ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-block:18px 14px}
+.mp{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:22px;align-items:start}
+.mp-box{position:relative;background:var(--surface-2);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.mp-box svg{display:block;width:100%;height:auto}
+.mp-box .vec{fill:var(--vec);stroke:var(--surface);stroke-width:1.4}
+.mp-box .vecl{font:700 10px var(--body);letter-spacing:.14em;fill:var(--muted);opacity:.7}
+.mp-box .mu{stroke:var(--surface);stroke-width:1.1;cursor:pointer;transition:fill .25s}
+.mp-box .mu:hover,.mp-box .mu:focus{stroke:var(--ink);stroke-width:2.2;outline:none}
+.mp-box .mu.sel{stroke:var(--ink);stroke-width:2.6}
+.mp-box .dep{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-opacity:.5;pointer-events:none}
+.mp-box .lbl{font:600 8.6px var(--body);fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-opacity:.85;stroke-width:2.6px;pointer-events:none;text-anchor:middle}
+.mp-box .bub{cursor:pointer}.mp-box .bub circle{stroke:var(--surface);stroke-width:1.6}.mp-box .bub text{font:700 10px var(--body);fill:#fff;text-anchor:middle;pointer-events:none}
+.mp-note{font-size:13px;color:var(--muted);margin:10px 2px 0}
+.mp-side{display:grid;gap:14px}
+.mp-lg{display:grid;gap:6px;margin-top:8px}.mp-lg div{display:flex;align-items:center;gap:9px;font-size:14px}
+.mp-lg i{width:22px;height:13px;border-radius:3px;flex:none;border:1px solid var(--line)}
+.mp-rk{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:2px}
+.mp-rk button{all:unset;cursor:pointer;display:grid;grid-template-columns:20px 1fr auto;gap:8px;width:100%;box-sizing:border-box;padding:6px 8px;border-radius:8px;font-size:14px}
+.mp-rk button:hover,.mp-rk button:focus-visible{background:var(--surface-2)}
+.mp-rk em{font-style:normal;color:var(--muted);font-size:12.5px}
+.mp-det h3{font-size:21px;margin:0}.mp-det .sub{color:var(--muted);font-size:14px;margin:2px 0 12px}
+.mp-det h4{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.mp-det ul{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:14.5px}
+.mp-det li{display:flex;gap:8px;align-items:baseline;justify-content:space-between}
+.mp-det .lvl{white-space:nowrap;flex:none}
+.mp-tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);white-space:nowrap}
+.mp-tag.n{color:var(--green)}.mp-tag.c{color:var(--cafe1)}
+.mp-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.mp-next{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.mp-next .card{display:grid;gap:8px;align-content:start}
+.mp-next ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15px}
+.soon{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--sun);color:#1b1300;justify-self:start}
+@media (max-width:900px){.mp{grid-template-columns:1fr}.mp-next{grid-template-columns:1fr}}
+@media (max-width:640px){#v-inicio .card[style*="auto;gap:16px"]{grid-template-columns:1fr!important}}
+@media (max-width:600px){.mp-box .lbl,.mp-box .vecl{display:none}.mp-ctl .seg{display:flex;width:100%;flex-wrap:wrap;border-radius:14px}.mp-ctl .seg button{flex:1;text-align:center;font-size:13px;padding:8px 6px}}
 .callout{background:var(--forest);color:var(--on-forest);border-radius:18px;padding:28px;display:grid;gap:12px}
 .callout p{color:var(--on-forest-muted)}
 .instr-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
@@ -402,6 +444,7 @@ footer a{color:var(--leaf-bright)}
       <a href="#graficos" data-r="graficos">Gráficos</a>
       <a href="#cifras" data-r="cifras">Cifras</a>
       <a href="#atractivos" data-r="atractivos">Atractivos</a>
+      <a href="#mapa" data-r="mapa">Mapa</a>
     </nav>
   </div>
 </header>
@@ -436,6 +479,9 @@ footer a{color:var(--leaf-bright)}
   </section>
 
 
+  <section class="band" style="padding-block:28px"><div class="wrap"><div class="card" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center">
+    <div style="display:grid;gap:6px"><span class="soon">Nuevo</span><h3 style="margin:0">Caldas en el mapa</h3><p style="margin:0">Atractivos, áreas protegidas, Paisaje Cultural Cafetero y establecimientos Huella Verde, municipio por municipio. <span class="muted">Próximamente: informe personal descargable, sello verificable con código QR, alertas para el turista y datos abiertos.</span></p></div>
+    <a class="btn" href="#mapa">Ver el mapa</a></div></div></section>
   <section class="band gallery-band">
     <div class="wrap" style="display:grid;gap:24px">
       <div class="ghead"><div style="display:grid;gap:8px"><span class="eyebrow">Caldas biodiverso</span><h2>Lo que protege cada autodiagnóstico</h2></div><p class="muted">Cada respuesta de las cartillas se traduce en agua más limpia, bosques conectados y especies que siguen siendo el mayor atractivo turístico del departamento.</p></div>
@@ -741,6 +787,43 @@ footer a{color:var(--leaf-bright)}
     <div class="callout"><h3>¿Opera uno de estos atractivos o un servicio turístico en Caldas?</h3><p>Mida su huella ambiental con la cartilla Huella Verde y aparezca en los resultados del Observatorio.</p><div><a class="btn" href="#evaluar">Hacer la autoevaluación</a></div></div>
   </div>
 </div>
+<div id="v-mapa" data-view hidden>
+  <div class="vhead" style="--vimg:url(img/at-palma-v2-720.jpg)"><div class="wrap">
+    <span class="corpo-badge"><img src="img/corpocaldas.png" alt="Corpocaldas" width="82" height="56"></span>
+    <span class="eyebrow">Caldas en el mapa</span>
+    <h1 id="mp-h">Atractivos, áreas protegidas y Huella Verde por municipio</h1>
+    <p>Elija una capa y haga clic en un municipio para ver sus atractivos de naturaleza y cultura, sus áreas protegidas, si hace parte del Paisaje Cultural Cafetero y los establecimientos que ya midieron su Huella Verde.</p>
+  </div></div>
+  <div class="wrap" style="padding-block:20px 72px;display:grid;gap:22px">
+    <div class="kpis" id="mp-kpis" style="margin-block:4px 0"></div>
+    <div>
+      <div class="mp-ctl"><div class="seg" role="group" aria-label="Capa del mapa" id="mp-capa">
+        <button type="button" data-c="atr" aria-pressed="true">Atractivos</button>
+        <button type="button" data-c="ap" aria-pressed="false">Áreas protegidas</button>
+        <button type="button" data-c="pcc" aria-pressed="false">Paisaje Cultural Cafetero</button>
+        <button type="button" data-c="hv" aria-pressed="false">Huella Verde</button>
+      </div></div>
+      <div class="mp">
+        <div><div class="mp-box" id="mp-box"></div><p class="mp-note" id="mp-note"></p></div>
+        <div class="mp-side"><div class="card" id="mp-leg"></div><div class="card mp-det" id="mp-det"></div></div>
+      </div>
+    </div>
+    <section style="display:grid;gap:14px">
+      <div style="display:grid;gap:6px"><span class="eyebrow">Lo que viene</span><h2 style="margin:0">El Observatorio seguirá creciendo</h2><p class="muted" style="margin:0">Estas funciones están en desarrollo y se implementarán pronto.</p></div>
+      <div class="mp-next">
+        <div class="card"><span class="soon">Fase 2 · próximamente</span><h3 style="margin:0">Para cada establecimiento</h3><ul>
+          <li><b>Informe personal descargable</b>: su puntaje, cómo está frente al promedio de su municipio y las tres acciones que más le subirían el nivel.</li>
+          <li><b>Sello Huella Verde verificable con código QR</b>, para exhibir en recepción y que el turista confirme el nivel en el Observatorio.</li>
+          <li><b>Primer reporte consolidado de turismo sostenible de Caldas 2026.</b></li></ul></div>
+        <div class="card"><span class="soon">Fase 3 · próximamente</span><h3 style="margin:0">Para el visitante y los investigadores</h3><ul>
+          <li><b>Alertas para el turista</b>: nivel de actividad del volcán Nevado del Ruiz y estado de vías y senderos.</li>
+          <li><b>Datos abiertos</b>: descarga de los indicadores agregados para universidades e investigadores.</li>
+          <li><b>Cifras de prestadores turísticos por municipio</b> del Registro Nacional de Turismo.</li></ul></div>
+      </div>
+    </section>
+    <p class="mp-note">Fuentes del inventario inicial: <a href="https://destinocaldas.com/sostenibilidad_calda/areas-naturales-protegidas/" target="_blank" rel="noopener">Destino Caldas · áreas naturales protegidas</a> y <a href="https://destinocaldas.com/turismo-de-naturaleza-old/" target="_blank" rel="noopener">turismo de naturaleza</a>; <a href="https://www.lapatria.com/entretenimiento/caldas-un-recorrido-por-su-riqueza-cultural-y-natural-ideal-para-toda-la-familia-en" target="_blank" rel="noopener">La Patria</a>; <a href="https://www.minambiente.gov.co/wp-content/uploads/2021/08/conpes-3803-de-2014.pdf" target="_blank" rel="noopener">CONPES 3803 de 2014</a> (Paisaje Cultural Cafetero); <a href="https://www.elespectador.com/ambiente/estrella-hidrica-de-caldas-asi-es-la-nueva-area-protegida-del-pais/" target="_blank" rel="noopener">El Espectador</a> (DRMI Estrella Hídrica). Límites municipales: DANE, Marco Geoestadístico Nacional 2018. Es un inventario inicial que el Observatorio ampliará con los municipios y prestadores; verifique horarios y acceso antes de viajar.</p>
+  </div>
+</div>
 </main>
 
 <footer><div class="wrap">
@@ -1002,7 +1085,7 @@ document.getElementById("csvBtn").addEventListener("click",()=>{
 });
 
 /* ---------- routing ---------- */
-const ROUTES=["inicio","evaluar","resultados","graficos","cifras","atractivos"];
+const ROUTES=["inicio","evaluar","resultados","graficos","cifras","atractivos","mapa"];
 function route(){
   let h=(location.hash||"#inicio").slice(1); if(!ROUTES.includes(h))h="inicio";
   document.querySelectorAll("[data-view]").forEach(v=>v.hidden=v.id!=="v-"+h);
@@ -1010,6 +1093,7 @@ function route(){
   window.scrollTo(0,0);
   if(h==="graficos")renderCharts();
   if(h==="resultados")renderResults();
+  if(h==="mapa")renderMapa();
 }
 window.addEventListener("hashchange",route);
 
@@ -1293,8 +1377,85 @@ function renderSynth(){
 const tip=document.getElementById("tip");
 document.addEventListener("mousemove",e=>{const t=e.target.closest?.("[data-tip]");if(!t){tip.hidden=true;return}tip.textContent=t.getAttribute("data-tip");tip.hidden=false;const x=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8),y=e.clientY+16+tip.offsetHeight>innerHeight?e.clientY-tip.offsetHeight-10:e.clientY+16;tip.style.left=x+"px";tip.style.top=y+"px"});
 
-function renderAll(){const h=(location.hash||"#inicio").slice(1);if(h==="resultados")renderResults();if(h==="graficos")renderCharts()}
+function renderAll(){const h=(location.hash||"#inicio").slice(1);if(h==="resultados")renderResults();if(h==="graficos")renderCharts();if(h==="mapa")renderMapa()}
 
+
+/* ---------- mapa del Observatorio ---------- */
+const MP={capa:"atr",sel:null};
+const MP_SEQ=["var(--sq1)","var(--sq2)","var(--sq3)","var(--sq4)","var(--sq5)"];
+const mpNorm=s=>String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().trim();
+const AP_CAT={PNN:"Parque Nacional Natural",RFP:"Reserva Forestal Protectora",DRMI:"Distrito Regional de Manejo Integrado",DMS:"Distrito de Manejo de Suelos"};
+function mpDatos(){
+  const T=window.OBS_TERR||{},G=window.OBS_MAPA,byN={};(window.OBS_MUN||[]).forEach(m=>byN[mpNorm(m.nombre)]=m.dane);
+  const ev={},evT={};records.forEach(r=>{const d=byN[mpNorm(String(r.municipio||"").split(/[·,(]/)[0])];if(!d)return;(r.instrumento==="T"?evT:ev)[d]=((r.instrumento==="T"?evT:ev)[d]||[]).concat(r)});
+  return (window.OBS_MUN||[]).map(m=>{const t=T[m.nombre]||{atr:[],ap:[],pcc:null},E=ev[m.dane]||[],sc=E.map(r=>score(r).total);
+    return{...m,g:G.m[m.dane],atr:t.atr,ap:t.ap,pcc:t.pcc,ev:E,evT:evT[m.dane]||[],prom:sc.length?sc.reduce((a,b)=>a+b,0)/sc.length:null}});
+}
+function mpClase(v,c){let i=0;while(i<c.length&&v>=c[i])i++;return i}
+function mpColor(x){
+  if(MP.capa==="atr")return x.atr.length?MP_SEQ[mpClase(x.atr.length,[3,4,5])+1]:"var(--nod)";
+  if(MP.capa==="ap")return x.ap.length?MP_SEQ[Math.min(4,x.ap.length+1)]:"var(--nod)";
+  if(MP.capa==="pcc")return x.pcc==="p"?"var(--cafe1)":x.pcc==="i"?"var(--cafe2)":"var(--nod)";
+  return x.prom==null?"var(--nod)":LV_COLORS[levelOf(x.prom)];
+}
+function mpValor(x){
+  if(MP.capa==="atr")return x.atr.length+(x.atr.length===1?" atractivo inventariado":" atractivos inventariados");
+  if(MP.capa==="ap")return x.ap.length?x.ap.length+(x.ap.length===1?" área protegida":" áreas protegidas"):"Sin áreas protegidas en el inventario";
+  if(MP.capa==="pcc")return x.pcc==="p"?"Área principal del Paisaje Cultural Cafetero":x.pcc==="i"?"Zona de influencia del Paisaje Cultural Cafetero":"Fuera del Paisaje Cultural Cafetero";
+  return x.ev.length?`${x.ev.length} ${x.ev.length===1?"establecimiento":"establecimientos"} · promedio ${fmt(x.prom)} / 100`:"Aún sin autodiagnósticos";
+}
+function renderMapa(){
+  const G=window.OBS_MAPA,box=document.getElementById("mp-box");if(!box)return;
+  if(!G){box.innerHTML='<p style="padding:20px">No fue posible cargar el mapa.</p>';return}
+  const D=mpDatos(),byD=Object.fromEntries(D.map(x=>[x.dane,x]));
+  document.querySelectorAll("#mp-capa button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.c===MP.capa));
+  // cifras y título que concluye
+  const apU=new Set(D.flatMap(x=>x.ap.map(a=>a[0]))),nAtr=D.reduce((a,x)=>a+x.atr.length,0),nE=D.reduce((a,x)=>a+x.ev.length,0),mE=D.filter(x=>x.ev.length).length,nP=D.filter(x=>x.pcc).length;
+  document.getElementById("mp-kpis").innerHTML=[["Atractivos",nAtr,"inventariados en los 27 municipios"],["Áreas protegidas",apU.size,`en ${D.filter(x=>x.ap.length).length} municipios`],["Paisaje Cultural Cafetero",nP,"municipios de Caldas en el paisaje UNESCO"],["Huella Verde",nE,nE?`${nE===1?"establecimiento":"establecimientos"} en ${mE} ${mE===1?"municipio":"municipios"}`:"aún sin autodiagnósticos"]].map(([t,b,s])=>`<div class="kpi"><span>${t}</span><b class="num">${b}</b><small>${s}</small></div>`).join("");
+  document.getElementById("mp-h").textContent=nE?`${nE} ${nE===1?"establecimiento ya midió":"establecimientos ya midieron"} su Huella Verde en ${mE} de los 27 municipios`:"Atractivos, áreas protegidas y Huella Verde por municipio";
+  // mapa
+  const vec=Object.values(G.v).map(v=>`<path class="vec" d="${v.d}"/>`).join("");
+  const vecl=[["CHOCÓ",12,G.h*.42],["RISARALDA",G.w*.2,G.h-12],["ANTIOQUIA",G.w*.42,16],["TOLIMA",G.w*.70,G.h-12],["CUNDINAMARCA",G.w-12,G.h*.62,"end"]].map(([t,x,y,an])=>`<text class="vecl" x="${x}" y="${y}"${an?` text-anchor="${an}"`:""}>${t}</text>`).join("");
+  const mus=D.map(x=>`<path class="mu${MP.sel===x.dane?" sel":""}" d="${x.g.d}" style="fill:${mpColor(x)}" data-d="${x.dane}" tabindex="0" role="button" aria-label="${esc(x.nombre)}: ${esc(mpValor(x))}"/>`).join("");
+  const NUDGE={"17616":[200,251],"17665":[171,265],"17877":[137,276],"17088":[165,297]};
+  let bub="",lbl="";const OBS=[],puestas=[];
+  D.forEach(x=>{const [cx,cy]=NUDGE[x.dane]||x.g.c;x._c=[[cx,cy+3,"middle"],[cx,cy-8,"middle"],[cx,cy+14,"middle"]];
+    if(MP.capa==="hv"&&x.ev.length){const r=8+3*Math.sqrt(x.ev.length),y0=cy-4;bub+=`<g class="bub" data-d="${x.dane}"><title>${esc(x.nombre+": "+mpValor(x))}</title><circle cx="${cx}" cy="${y0}" r="${r.toFixed(1)}" style="fill:var(--ink)"/><text x="${cx}" y="${y0+3.5}" style="fill:var(--bg)">${x.ev.length}</text></g>`;OBS.push([cx-r,y0-r,cx+r,y0+r]);x._c=[[cx,y0+r+10,"middle"],[cx,y0-r-3,"middle"],[cx-r-3,y0+3,"end"],[cx+r+3,y0+3,"start"]]}});
+  const bx=(l,t)=>{const w=t.length*4.9,x0=l[2]==="start"?l[0]:l[2]==="end"?l[0]-w:l[0]-w/2;return[x0,l[1]-8,x0+w,l[1]+2]},hit=(a,b)=>a[0]<b[2]&&b[0]<a[2]&&a[1]<b[3]&&b[1]<a[3];
+  [...D].sort((a,b)=>(b._c.length>3)-(a._c.length>3)).forEach(x=>{const ok=x._c.find(l=>{const me=bx(l,x.nombre);return!OBS.some(o=>hit(me,o))&&!puestas.some(o=>hit(me,o))})||x._c[0];puestas.push(bx(ok,x.nombre));
+    lbl+=`<text class="lbl" x="${ok[0]}" y="${ok[1]}" style="text-anchor:${ok[2]}">${esc(x.nombre)}</text>`;delete x._c});
+  box.innerHTML=`<svg viewBox="0 0 ${G.w} ${G.h}" role="group" aria-label="Mapa de los 27 municipios de Caldas">${vec}${vecl}${mus}<path class="dep" d="${G.dep}"/>${lbl}${bub}</svg>`;
+  box.querySelectorAll("[data-d]").forEach(el=>{const x=byD[el.dataset.d];el.setAttribute("data-tip",x.nombre+": "+mpValor(x));
+    el.addEventListener("click",()=>{tip.hidden=true;mpSel(x.dane)});el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();mpSel(x.dane)}})});
+  mpLeyenda(D);mpDetalle(D);
+  document.getElementById("mp-note").textContent=MP.capa==="atr"?"Color más intenso: más atractivos en el inventario inicial. No mide la importancia turística del municipio, solo lo que el Observatorio ha registrado hasta hoy."
+    :MP.capa==="ap"?"Áreas protegidas del inventario de Destino Caldas y el DRMI Estrella Hídrica (2026). Un área que abarca varios municipios aparece en cada uno."
+    :MP.capa==="pcc"?"Municipios de Caldas en el Paisaje Cultural Cafetero, patrimonio mundial UNESCO desde 2011, según el CONPES 3803 de 2014."
+    :"Color: nivel del puntaje promedio de los establecimientos del municipio. Círculo: cuántos han diligenciado la cartilla Huella Verde.";
+}
+function mpLeyenda(D){
+  const el=document.getElementById("mp-leg"),it=(c,t)=>`<div><i style="background:${c}"></i><span>${t}</span></div>`;let h="",rk=[];
+  if(MP.capa==="atr"){h=`<h3 style="margin:0">Atractivos inventariados</h3><div class="mp-lg">${it("var(--nod)","Sin registro")}${it(MP_SEQ[1],"1 a 2")}${it(MP_SEQ[2],"3")}${it(MP_SEQ[3],"4")}${it(MP_SEQ[4],"5 o más")}</div>`;rk=[...D].sort((a,b)=>b.atr.length-a.atr.length).slice(0,6).map(x=>[x,x.atr.length,"atractivos"]);h+=`<h3 style="margin:16px 0 0;font-size:15px">Con más atractivos</h3>`}
+  else if(MP.capa==="ap"){h=`<h3 style="margin:0">Áreas protegidas</h3><div class="mp-lg">${it("var(--nod)","Ninguna en el inventario")}${it(MP_SEQ[2],"1")}${it(MP_SEQ[3],"2")}${it(MP_SEQ[4],"3 o más")}</div>`;rk=D.filter(x=>x.ap.length).sort((a,b)=>b.ap.length-a.ap.length).slice(0,6).map(x=>[x,x.ap.length,x.ap.length===1?"área":"áreas"]);h+=`<h3 style="margin:16px 0 0;font-size:15px">Con más áreas protegidas</h3>`}
+  else if(MP.capa==="pcc"){const n=k=>D.filter(x=>x.pcc===k).length;h=`<h3 style="margin:0">Paisaje Cultural Cafetero</h3><div class="mp-lg">${it("var(--cafe1)",`Área principal · ${n("p")}`)}${it("var(--cafe2)",`Zona de influencia · ${n("i")}`)}${it("var(--nod)",`Fuera del paisaje · ${D.filter(x=>!x.pcc).length}`)}</div>`}
+  else{h=`<h3 style="margin:0">Nivel Huella Verde promedio</h3><div class="mp-lg">${INSTR.E.niveles.map((n,i)=>it(LV_COLORS[i],`${n} · ${LV_RANGES[i]}`)).join("")}${it("var(--nod)","Aún sin autodiagnósticos")}</div>`;
+    rk=D.filter(x=>x.ev.length).sort((a,b)=>b.prom-a.prom).slice(0,6).map(x=>[x,fmt(x.prom),"/ 100"]);if(rk.length)h+=`<h3 style="margin:16px 0 0;font-size:15px">Mejor puntaje promedio</h3>`;else h+=`<p class="muted" style="margin:12px 0 0;font-size:14px">Cuando los establecimientos diligencien la cartilla, aparecerán aquí por municipio.</p><a class="btn small" href="#evaluar" style="margin-top:10px">Hacer la autoevaluación</a>`}
+  if(rk.length)h+=`<ol class="mp-rk">${rk.map(([x,v,u],i)=>`<li><button type="button" data-d="${x.dane}"><em>${i+1}</em><span>${esc(x.nombre)}</span><span><b class="num">${v}</b> <em>${u}</em></span></button></li>`).join("")}</ol>`;
+  el.innerHTML=h;el.querySelectorAll("[data-d]").forEach(b=>b.onclick=()=>mpSel(b.dataset.d));
+}
+function mpDetalle(D){
+  const el=document.getElementById("mp-det"),x=D.find(y=>y.dane===MP.sel);
+  if(!x){el.innerHTML=`<h3>Caldas</h3><p class="sub">27 municipios · haga clic en uno para ver su ficha</p><p style="font-size:15px;margin:0">El inventario reúne atractivos de naturaleza y de cultura, las áreas protegidas declaradas y el resultado de los autodiagnósticos Huella Verde. Se irá ampliando con los municipios y los prestadores turísticos.</p>`;return}
+  const pcc=x.pcc==="p"?"Paisaje Cultural Cafetero · área principal":x.pcc==="i"?"Paisaje Cultural Cafetero · zona de influencia":"";
+  const atr=x.atr.length?`<ul>${x.atr.map(([n,t])=>`<li><span>${esc(n)}</span><span class="mp-tag ${t}">${t==="n"?"Naturaleza":"Cultura"}</span></li>`).join("")}</ul>`:`<p class="muted" style="margin:0;font-size:14px">Aún sin atractivos en el inventario.</p>`;
+  const ap=x.ap.length?`<ul>${x.ap.map(([n,c,ha])=>`<li><span>${esc(n)}</span><span class="mp-tag" title="${esc(AP_CAT[c]||c)}">${ha?fmt(ha)+" ha":esc(c)}</span></li>`).join("")}</ul>`:`<p class="muted" style="margin:0;font-size:14px">Ninguna en el inventario inicial.</p>`;
+  const hv=x.ev.length?`<ul>${[...x.ev].sort((a,b)=>score(b).total-score(a).total).map(r=>{const s=score(r);return`<li><span>${esc(r.entidad)}</span>${lvlChip(INSTR.E,s.level)}</li>`}).join("")}</ul>`:`<p class="muted" style="margin:0;font-size:14px">Ningún establecimiento de ${esc(x.nombre)} ha diligenciado la cartilla todavía.</p>`;
+  const hvT=x.evT.length?`<p style="font-size:14px;margin:8px 0 0">La alcaldía ya midió su <b>Huella Verde Territorial</b>: ${lvlChip(INSTR.T,score(x.evT[0]).level)}</p>`:"";
+  el.innerHTML=`<h3>${esc(x.nombre)}</h3><p class="sub">${esc(x.sub)}${pcc?" · "+pcc:""}</p><h4>Atractivos</h4>${atr}<h4>Áreas protegidas</h4>${ap}<h4>Huella Verde</h4>${hv}${hvT}<div class="mp-acts">${x.ev.length?`<a class="btn small ghost" href="#resultados">Ver resultados</a>`:""}<a class="btn small" href="#evaluar">Evaluar mi establecimiento</a><button type="button" class="btn small ghost" data-clr>Ver Caldas</button></div>`;
+  el.querySelector("[data-clr]").onclick=()=>mpSel(null);
+}
+function mpSel(d){MP.sel=MP.sel===d?null:d;renderMapa();if(d&&innerWidth<=900)document.getElementById("mp-det").scrollIntoView({behavior:"smooth",block:"nearest"})}
+document.getElementById("mp-capa").addEventListener("click",e=>{const b=e.target.closest("[data-c]");if(b){MP.capa=b.dataset.c;renderMapa()}});
 
 /* ---------- ejes del observatorio ---------- */
 const EJES=[
