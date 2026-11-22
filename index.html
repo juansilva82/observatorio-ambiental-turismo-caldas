@@ -15,7 +15,7 @@
 <script src="mapa-caldas.js"></script>
 <script src="territorio.js"></script>
 <style>:root{
-  --sq1:#e6f0d8; --sq2:#c4dca0; --sq3:#94b86a; --sq4:#5f8a36; --sq5:#355c1c; --nod:#e2e7e4; --vec:#eef2ef; --cafe1:#8a5a2b; --cafe2:#d8b98f;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+  --sq1:#e6f0d8; --sq2:#c4dca0; --sq3:#94b86a; --sq4:#5f8a36; --sq5:#355c1c; --nod:#e2e7e4; --vec:#eef2ef; --cafe1:#8a5a2b; --cafe2:#d8b98f; --sr1:#2a78d6; --sr2:#eb6834; --sr3:#1baf7a; --sr4:#eda100; --sr5:#e87ba4; --sr6:#008300; --sm1:#fde4d6; --sm2:#f8b896; --sm3:#ee8456; --sm4:#d4572a; --sm5:#9c3412;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <style>
@@ -34,7 +34,7 @@
   --shadow:0 1px 2px rgba(12,53,39,.06),0 8px 24px rgba(12,53,39,.06);
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --sq1:#1f3a26; --sq2:#2f5a32; --sq3:#4b7f3c; --sq4:#74a84c; --sq5:#a8d47a; --nod:#24332e; --vec:#12241f; --cafe1:#d29a5c; --cafe2:#6b4d2c;
+  --sq1:#1f3a26; --sq2:#2f5a32; --sq3:#4b7f3c; --sq4:#74a84c; --sq5:#a8d47a; --nod:#24332e; --vec:#12241f; --cafe1:#d29a5c; --cafe2:#6b4d2c; --sr1:#3987e5; --sr2:#d95926; --sr3:#199e70; --sr4:#c98500; --sr5:#d55181; --sr6:#008300; --sm1:#3d2016; --sm2:#6b3218; --sm3:#a24a22; --sm4:#d9713f; --sm5:#f3a67c;
   --bg:#091512; --surface:#0f211c; --surface-2:#153029; --ink:#e5f0ea; --muted:#a2bab0; --line:#24403a;
   --forest:#08201b; --forest-2:#0f3a31; --on-forest:#f2f8f4; --on-forest-muted:#aac8bb;
   --leaf:#9ccc3c; --leaf-ink:#0a1a12; --leaf-bright:#a9d652; --leaf-soft:#1c3622;
@@ -44,7 +44,7 @@
   --lv0:#e0694a; --lv1:#e6aa1f; --lv2:#8ab64c; --lv3:#4aa8e0; --heat:74,168,224;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --sq1:#1f3a26; --sq2:#2f5a32; --sq3:#4b7f3c; --sq4:#74a84c; --sq5:#a8d47a; --nod:#24332e; --vec:#12241f; --cafe1:#d29a5c; --cafe2:#6b4d2c;
+  --sq1:#1f3a26; --sq2:#2f5a32; --sq3:#4b7f3c; --sq4:#74a84c; --sq5:#a8d47a; --nod:#24332e; --vec:#12241f; --cafe1:#d29a5c; --cafe2:#6b4d2c; --sr1:#3987e5; --sr2:#d95926; --sr3:#199e70; --sr4:#c98500; --sr5:#d55181; --sr6:#008300; --sm1:#3d2016; --sm2:#6b3218; --sm3:#a24a22; --sm4:#d9713f; --sm5:#f3a67c;
   --bg:#091512; --surface:#0f211c; --surface-2:#153029; --ink:#e5f0ea; --muted:#a2bab0; --line:#24403a;
   --forest:#08201b; --forest-2:#0f3a31; --on-forest:#f2f8f4; --on-forest-muted:#aac8bb;
   --leaf:#9ccc3c; --leaf-ink:#0a1a12; --leaf-bright:#a9d652; --leaf-soft:#1c3622;
@@ -188,7 +188,7 @@ section.band.alt{background:var(--surface)}
 .mp-det li{display:flex;gap:8px;align-items:baseline;justify-content:space-between}
 .mp-det .lvl{white-space:nowrap;flex:none}
 .mp-tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);white-space:nowrap}
-.mp-tag.n{color:var(--green)}.mp-tag.c{color:var(--cafe1)}
+.mp .pp path{fill:var(--bg);stroke:var(--ink);stroke-width:2}.pp-k{width:12px!important;height:12px!important;transform:rotate(45deg);background:var(--bg)!important;border:2px solid var(--ink)!important;border-radius:1px!important;box-sizing:border-box}.mp .epi circle{fill:var(--sm5)}.mp .epi .ring{fill:none;stroke:var(--sm5);stroke-width:2}.mp .epi text{font:700 11px var(--body);fill:var(--ink)}.mp-tb{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}.mp-tb th{text-align:left;font-weight:600;color:var(--muted);font-size:12px;padding:4px 0}.mp-tb td{padding:5px 0;border-top:1px solid var(--line)}.mp-tb td:not(:first-child),.mp-tb th:not(:first-child){text-align:right}.mp-tb i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:-1px}.mp-tag.n{color:var(--green)}.mp-tag.c{color:var(--cafe1)}
 .mp-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
 .mp-next{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .mp-next .card{display:grid;gap:8px;align-content:start}
@@ -956,7 +956,7 @@ footer a{color:var(--leaf-bright)}
     <span class="corpo-badge"><img src="img/corpocaldas.png" alt="Corpocaldas" width="82" height="56"></span>
     <span class="eyebrow">Caldas en el mapa</span>
     <h1 id="mp-h">Atractivos, áreas protegidas y Huella Verde por municipio</h1>
-    <p>Elija una capa y haga clic en un municipio para ver sus atractivos de naturaleza y cultura, sus áreas protegidas, si hace parte del Paisaje Cultural Cafetero y los establecimientos que ya midieron su Huella Verde.</p>
+    <p>Elija una capa y haga clic en un municipio para ver sus atractivos de naturaleza y cultura, sus áreas protegidas, su patrimonio, su subregión, cómo lo afectó el sismo de 2026 y los establecimientos que ya midieron su Huella Verde.</p>
   </div></div>
   <div class="wrap" style="padding-block:20px 72px;display:grid;gap:22px">
     <div class="kpis" id="mp-kpis" style="margin-block:4px 0"></div>
@@ -964,7 +964,9 @@ footer a{color:var(--leaf-bright)}
       <div class="mp-ctl"><div class="seg" role="group" aria-label="Capa del mapa" id="mp-capa">
         <button type="button" data-c="atr" aria-pressed="true">Atractivos</button>
         <button type="button" data-c="ap" aria-pressed="false">Áreas protegidas</button>
-        <button type="button" data-c="pcc" aria-pressed="false">Paisaje Cultural Cafetero</button>
+        <button type="button" data-c="pcc" aria-pressed="false">Patrimonio</button>
+        <button type="button" data-c="sub" aria-pressed="false">Subregiones</button>
+        <button type="button" data-c="sis" aria-pressed="false">Sismo 2026</button>
         <button type="button" data-c="hv" aria-pressed="false">Huella Verde</button>
       </div></div>
       <div class="mp">
@@ -1611,24 +1613,34 @@ function renderAll(){const h=(location.hash||"#inicio").slice(1);if(h==="inicio"
 const MP={capa:"atr",sel:null};
 const MP_SEQ=["var(--sq1)","var(--sq2)","var(--sq3)","var(--sq4)","var(--sq5)"];
 const mpNorm=s=>String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().trim();
+const MP_SR=["Centro Sur","Norte","Alto Occidente","Bajo Occidente","Alto Oriente","Magdalena Caldense"];
+const MP_SM=["var(--sm1)","var(--sm2)","var(--sm3)","var(--sm4)","var(--sm5)"],MP_SMC=[100,300,600,1000];
+/* Pueblos Patrimonio de Colombia en Caldas: MinCIT, Red Turística de Pueblos Patrimonio (2023). */
+const MP_PP=["Aguadas","Salamina"];
+/* Viviendas afectadas por el sismo del 10 de agosto de 2026: EDAN, corte 14-sep-2026 (consolidado de la Gobernación de Caldas). */
+const MP_EDAN={"Manizales":11513,"Riosucio":1571,"Anserma":1390,"Belalcázar":994,"Villamaría":767,"Viterbo":743,"Chinchiná":663,"Aguadas":607,"Palestina":570,"Salamina":551,"Aranzazu":480,"San José":472,"Neira":471,"Risaralda":397,"Samaná":362,"Supía":353,"Pácora":339,"Pensilvania":275,"Filadelfia":170,"Manzanares":160,"Marquetalia":147,"Marmato":122,"Marulanda":103,"La Merced":94,"Victoria":91,"La Dorada":64,"Norcasia":23};
 const AP_CAT={PNN:"Parque Nacional Natural",RFP:"Reserva Forestal Protectora",DRMI:"Distrito Regional de Manejo Integrado",DMS:"Distrito de Manejo de Suelos"};
 function mpDatos(){
   const T=window.OBS_TERR||{},G=window.OBS_MAPA,byN={};(window.OBS_MUN||[]).forEach(m=>byN[mpNorm(m.nombre)]=m.dane);
   const ev={},evT={};records.forEach(r=>{const d=byN[mpNorm(String(r.municipio||"").split(/[·,(]/)[0])];if(!d)return;(r.instrumento==="T"?evT:ev)[d]=((r.instrumento==="T"?evT:ev)[d]||[]).concat(r)});
   return (window.OBS_MUN||[]).map(m=>{const t=T[m.nombre]||{atr:[],ap:[],pcc:null},E=ev[m.dane]||[],sc=E.map(r=>score(r).total);
-    return{...m,g:G.m[m.dane],atr:t.atr,ap:t.ap,pcc:t.pcc,ev:E,evT:evT[m.dane]||[],prom:sc.length?sc.reduce((a,b)=>a+b,0)/sc.length:null}});
+    return{...m,g:G.m[m.dane],atr:t.atr,ap:t.ap,pcc:t.pcc,pp:MP_PP.includes(m.nombre),viv:MP_EDAN[m.nombre]??null,ev:E,evT:evT[m.dane]||[],prom:sc.length?sc.reduce((a,b)=>a+b,0)/sc.length:null}});
 }
 function mpClase(v,c){let i=0;while(i<c.length&&v>=c[i])i++;return i}
 function mpColor(x){
   if(MP.capa==="atr")return x.atr.length?MP_SEQ[mpClase(x.atr.length,[3,4,5])+1]:"var(--nod)";
   if(MP.capa==="ap")return x.ap.length?MP_SEQ[Math.min(4,x.ap.length+1)]:"var(--nod)";
   if(MP.capa==="pcc")return x.pcc==="p"?"var(--cafe1)":x.pcc==="i"?"var(--cafe2)":"var(--nod)";
+  if(MP.capa==="sub")return`var(--sr${MP_SR.indexOf(x.sub)+1})`;
+  if(MP.capa==="sis")return x.viv==null?"var(--nod)":MP_SM[mpClase(x.viv,MP_SMC)];
   return x.prom==null?"var(--nod)":LV_COLORS[levelOf(x.prom)];
 }
 function mpValor(x){
   if(MP.capa==="atr")return x.atr.length+(x.atr.length===1?" atractivo inventariado":" atractivos inventariados");
   if(MP.capa==="ap")return x.ap.length?x.ap.length+(x.ap.length===1?" área protegida":" áreas protegidas"):"Sin áreas protegidas en el inventario";
-  if(MP.capa==="pcc")return x.pcc==="p"?"Área principal del Paisaje Cultural Cafetero":x.pcc==="i"?"Zona de influencia del Paisaje Cultural Cafetero":"Fuera del Paisaje Cultural Cafetero";
+  if(MP.capa==="pcc")return(x.pcc==="p"?"Área principal del Paisaje Cultural Cafetero":x.pcc==="i"?"Zona de influencia del Paisaje Cultural Cafetero":"Fuera del Paisaje Cultural Cafetero")+(x.pp?" · Pueblo Patrimonio de Colombia":"");
+  if(MP.capa==="sub")return"Subregión "+x.sub;
+  if(MP.capa==="sis")return x.viv==null?"Sin dato EDAN":fmt(x.viv)+" viviendas afectadas por el sismo";
   return x.ev.length?`${x.ev.length} ${x.ev.length===1?"establecimiento":"establecimientos"} · promedio ${fmt(x.prom)} / 100`:"Aún sin autodiagnósticos";
 }
 function renderMapa(){
@@ -1647,24 +1659,33 @@ function renderMapa(){
   const NUDGE={"17616":[200,251],"17665":[171,265],"17877":[137,276],"17088":[165,297]};
   let bub="",lbl="";const OBS=[],puestas=[];
   D.forEach(x=>{const [cx,cy]=NUDGE[x.dane]||x.g.c;x._c=[[cx,cy+3,"middle"],[cx,cy-8,"middle"],[cx,cy+14,"middle"]];
-    if(MP.capa==="hv"&&x.ev.length){const r=8+3*Math.sqrt(x.ev.length),y0=cy-4;bub+=`<g class="bub" data-d="${x.dane}"><title>${esc(x.nombre+": "+mpValor(x))}</title><circle cx="${cx}" cy="${y0}" r="${r.toFixed(1)}" style="fill:var(--ink)"/><text x="${cx}" y="${y0+3.5}" style="fill:var(--bg)">${x.ev.length}</text></g>`;OBS.push([cx-r,y0-r,cx+r,y0+r]);x._c=[[cx,y0+r+10,"middle"],[cx,y0-r-3,"middle"],[cx-r-3,y0+3,"end"],[cx+r+3,y0+3,"start"]]}});
+    if(MP.capa==="hv"&&x.ev.length){const r=8+3*Math.sqrt(x.ev.length),y0=cy-4;bub+=`<g class="bub" data-d="${x.dane}"><title>${esc(x.nombre+": "+mpValor(x))}</title><circle cx="${cx}" cy="${y0}" r="${r.toFixed(1)}" style="fill:var(--ink)"/><text x="${cx}" y="${y0+3.5}" style="fill:var(--bg)">${x.ev.length}</text></g>`;OBS.push([cx-r,y0-r,cx+r,y0+r]);x._c=[[cx,y0+r+10,"middle"],[cx,y0-r-3,"middle"],[cx-r-3,y0+3,"end"],[cx+r+3,y0+3,"start"]]}
+    if(MP.capa==="pcc"&&x.pp){const y0=cy-6,r=7;bub+=`<g class="pp" data-d="${x.dane}"><title>${esc(x.nombre)}: Pueblo Patrimonio de Colombia</title><path d="M${cx} ${y0-r}L${cx+r} ${y0}L${cx} ${y0+r}L${cx-r} ${y0}Z"/></g>`;OBS.push([cx-r,y0-r,cx+r,y0+r]);x._c=[[cx,y0+r+10,"middle"],[cx,y0-r-3,"middle"],[cx-r-3,y0+3,"end"],[cx+r+3,y0+3,"start"]]}});
   const bx=(l,t)=>{const w=t.length*4.9,x0=l[2]==="start"?l[0]:l[2]==="end"?l[0]-w:l[0]-w/2;return[x0,l[1]-8,x0+w,l[1]+2]},hit=(a,b)=>a[0]<b[2]&&b[0]<a[2]&&a[1]<b[3]&&b[1]<a[3];
   [...D].sort((a,b)=>(b._c.length>3)-(a._c.length>3)).forEach(x=>{const ok=x._c.find(l=>{const me=bx(l,x.nombre);return!OBS.some(o=>hit(me,o))&&!puestas.some(o=>hit(me,o))})||x._c[0];puestas.push(bx(ok,x.nombre));
     lbl+=`<text class="lbl" x="${ok[0]}" y="${ok[1]}" style="text-anchor:${ok[2]}">${esc(x.nombre)}</text>`;delete x._c});
-  box.innerHTML=`<svg viewBox="0 0 ${G.w} ${G.h}" role="group" aria-label="Mapa de los 27 municipios de Caldas">${vec}${vecl}${mus}<path class="dep" d="${G.dep}"/>${lbl}${bub}</svg>`;
+  const epi=MP.capa==="sis"&&G.epi?`<g class="epi"><title>Epicentro: San José del Palmar, Chocó · magnitud 7,4</title><circle cx="${G.epi[0]}" cy="${G.epi[1]}" r="5"/><circle cx="${G.epi[0]}" cy="${G.epi[1]}" r="11" class="ring"/><text x="${G.epi[0]+15}" y="${G.epi[1]+4}">Epicentro · Chocó</text></g>`:"";
+  box.innerHTML=`<svg viewBox="0 0 ${G.w} ${G.h}" role="group" aria-label="Mapa de los 27 municipios de Caldas">${vec}${vecl}${mus}<path class="dep" d="${G.dep}"/>${lbl}${bub}${epi}</svg>`;
   box.querySelectorAll("[data-d]").forEach(el=>{const x=byD[el.dataset.d];el.setAttribute("data-tip",x.nombre+": "+mpValor(x));
     el.addEventListener("click",()=>{tip.hidden=true;mpSel(x.dane)});el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();mpSel(x.dane)}})});
   mpLeyenda(D);mpDetalle(D);
   document.getElementById("mp-note").textContent=MP.capa==="atr"?"Color más intenso: más atractivos en el inventario inicial. No mide la importancia turística del municipio, solo lo que el Observatorio ha registrado hasta hoy."
     :MP.capa==="ap"?"Áreas protegidas del inventario de Destino Caldas y el DRMI Estrella Hídrica (2026). Un área que abarca varios municipios aparece en cada uno."
-    :MP.capa==="pcc"?"Municipios de Caldas en el Paisaje Cultural Cafetero, patrimonio mundial UNESCO desde 2011, según el CONPES 3803 de 2014."
+    :MP.capa==="pcc"?"Color: municipios en el Paisaje Cultural Cafetero, patrimonio mundial UNESCO desde 2011 (CONPES 3803 de 2014). Rombo: Pueblos Patrimonio de Colombia (Red Turística de MinCIT)."
+    :MP.capa==="sub"?"Las seis subregiones de Caldas. Sirven para comparar la gestión ambiental del turismo entre territorios y planear la cobertura del piloto y del Sello."
+    :MP.capa==="sis"?"Viviendas afectadas por el sismo del 10 de agosto de 2026 (EDAN, corte 14 de septiembre). Muestra dónde la reactivación turística es más urgente; no mide daños en atractivos ni en establecimientos turísticos."
     :"Color: nivel del puntaje promedio de los establecimientos del municipio. Círculo: cuántos han diligenciado la cartilla Huella Verde.";
 }
 function mpLeyenda(D){
   const el=document.getElementById("mp-leg"),it=(c,t)=>`<div><i style="background:${c}"></i><span>${t}</span></div>`;let h="",rk=[];
   if(MP.capa==="atr"){h=`<h3 style="margin:0">Atractivos inventariados</h3><div class="mp-lg">${it("var(--nod)","Sin registro")}${it(MP_SEQ[1],"1 a 2")}${it(MP_SEQ[2],"3")}${it(MP_SEQ[3],"4")}${it(MP_SEQ[4],"5 o más")}</div>`;rk=[...D].sort((a,b)=>b.atr.length-a.atr.length).slice(0,6).map(x=>[x,x.atr.length,"atractivos"]);h+=`<h3 style="margin:16px 0 0;font-size:15px">Con más atractivos</h3>`}
   else if(MP.capa==="ap"){h=`<h3 style="margin:0">Áreas protegidas</h3><div class="mp-lg">${it("var(--nod)","Ninguna en el inventario")}${it(MP_SEQ[2],"1")}${it(MP_SEQ[3],"2")}${it(MP_SEQ[4],"3 o más")}</div>`;rk=D.filter(x=>x.ap.length).sort((a,b)=>b.ap.length-a.ap.length).slice(0,6).map(x=>[x,x.ap.length,x.ap.length===1?"área":"áreas"]);h+=`<h3 style="margin:16px 0 0;font-size:15px">Con más áreas protegidas</h3>`}
-  else if(MP.capa==="pcc"){const n=k=>D.filter(x=>x.pcc===k).length;h=`<h3 style="margin:0">Paisaje Cultural Cafetero</h3><div class="mp-lg">${it("var(--cafe1)",`Área principal · ${n("p")}`)}${it("var(--cafe2)",`Zona de influencia · ${n("i")}`)}${it("var(--nod)",`Fuera del paisaje · ${D.filter(x=>!x.pcc).length}`)}</div>`}
+  else if(MP.capa==="pcc"){const n=k=>D.filter(x=>x.pcc===k).length;h=`<h3 style="margin:0">Patrimonio</h3><div class="mp-lg">${it("var(--cafe1)",`Paisaje Cultural Cafetero · área principal · ${n("p")}`)}${it("var(--cafe2)",`Zona de influencia · ${n("i")}`)}${it("var(--nod)",`Fuera del paisaje · ${D.filter(x=>!x.pcc).length}`)}<div><i class="pp-k"></i><span>Pueblo Patrimonio de Colombia · ${D.filter(x=>x.pp).length}</span></div></div>`}
+  else if(MP.capa==="sub"){h=`<h3 style="margin:0">Subregiones</h3><div class="mp-lg">${MP_SR.map((n,i)=>it(`var(--sr${i+1})`,`${n} · ${D.filter(x=>x.sub===n).length}`)).join("")}</div>`;
+    const ag=MP_SR.map(n=>{const M=D.filter(x=>x.sub===n);return[n,M.reduce((a,x)=>a+x.atr.length,0),M.reduce((a,x)=>a+x.ev.length,0)]});
+    h+=`<h3 style="margin:16px 0 0;font-size:15px">Atractivos y cartillas por subregión</h3><table class="mp-tb"><thead><tr><th>Subregión</th><th>Atractivos</th><th>Cartillas</th></tr></thead><tbody>${ag.map(([n,a,e],i)=>`<tr><td><i style="background:var(--sr${i+1})"></i>${n}</td><td class="num">${a}</td><td class="num">${e}</td></tr>`).join("")}</tbody></table>`}
+  else if(MP.capa==="sis"){const tot=D.reduce((a,x)=>a+(x.viv||0),0);h=`<h3 style="margin:0">Viviendas afectadas · sismo 2026</h3><p class="muted" style="margin:4px 0 0;font-size:14px"><b class="num">${fmt(tot)}</b> en Caldas (EDAN, 14-sep-2026)</p><div class="mp-lg">${it(MP_SM[0],"Menos de 100")}${it(MP_SM[1],"100 a 299")}${it(MP_SM[2],"300 a 599")}${it(MP_SM[3],"600 a 999")}${it(MP_SM[4],"1.000 o más")}</div>`;
+    rk=[...D].sort((a,b)=>(b.viv||0)-(a.viv||0)).slice(0,6).map(x=>[x,fmt(x.viv),"viviendas"]);h+=`<h3 style="margin:16px 0 0;font-size:15px">Más afectados</h3>`}
   else{h=`<h3 style="margin:0">Nivel Huella Verde promedio</h3><div class="mp-lg">${INSTR.E.niveles.map((n,i)=>it(LV_COLORS[i],`${n} · ${LV_RANGES[i]}`)).join("")}${it("var(--nod)","Aún sin autodiagnósticos")}</div>`;
     rk=D.filter(x=>x.ev.length).sort((a,b)=>b.prom-a.prom).slice(0,6).map(x=>[x,fmt(x.prom),"/ 100"]);if(rk.length)h+=`<h3 style="margin:16px 0 0;font-size:15px">Mejor puntaje promedio</h3>`;else h+=`<p class="muted" style="margin:12px 0 0;font-size:14px">Cuando los establecimientos diligencien la cartilla, aparecerán aquí por municipio.</p><a class="btn small" href="#evaluar" style="margin-top:10px">Hacer la autoevaluación</a>`}
   if(rk.length)h+=`<ol class="mp-rk">${rk.map(([x,v,u],i)=>`<li><button type="button" data-d="${x.dane}"><em>${i+1}</em><span>${esc(x.nombre)}</span><span><b class="num">${v}</b> <em>${u}</em></span></button></li>`).join("")}</ol>`;
@@ -1673,12 +1694,13 @@ function mpLeyenda(D){
 function mpDetalle(D){
   const el=document.getElementById("mp-det"),x=D.find(y=>y.dane===MP.sel);
   if(!x){el.innerHTML=`<h3>Caldas</h3><p class="sub">27 municipios · haga clic en uno para ver su ficha</p><p style="font-size:15px;margin:0">El inventario reúne atractivos de naturaleza y de cultura, las áreas protegidas declaradas y el resultado de los autodiagnósticos Huella Verde. Se irá ampliando con los municipios y los prestadores turísticos.</p>`;return}
-  const pcc=x.pcc==="p"?"Paisaje Cultural Cafetero · área principal":x.pcc==="i"?"Paisaje Cultural Cafetero · zona de influencia":"";
+  const pcc=[x.pcc==="p"?"Paisaje Cultural Cafetero · área principal":x.pcc==="i"?"Paisaje Cultural Cafetero · zona de influencia":"",x.pp?"Pueblo Patrimonio de Colombia":""].filter(Boolean).join(" · ");
+  const sis=x.viv!=null?`<h4>Sismo 2026</h4><p style="margin:0;font-size:14px"><b class="num">${fmt(x.viv)}</b> viviendas afectadas (EDAN, 14-sep-2026)</p>`:"";
   const atr=x.atr.length?`<ul>${x.atr.map(([n,t])=>`<li><span>${esc(n)}</span><span class="mp-tag ${t}">${t==="n"?"Naturaleza":"Cultura"}</span></li>`).join("")}</ul>`:`<p class="muted" style="margin:0;font-size:14px">Aún sin atractivos en el inventario.</p>`;
   const ap=x.ap.length?`<ul>${x.ap.map(([n,c,ha])=>`<li><span>${esc(n)}</span><span class="mp-tag" title="${esc(AP_CAT[c]||c)}">${ha?fmt(ha)+" ha":esc(c)}</span></li>`).join("")}</ul>`:`<p class="muted" style="margin:0;font-size:14px">Ninguna en el inventario inicial.</p>`;
   const hv=x.ev.length?`<ul>${[...x.ev].sort((a,b)=>score(b).total-score(a).total).map(r=>{const s=score(r);return`<li><span>${esc(r.entidad)}</span>${lvlChip(INSTR.E,s.level)}</li>`}).join("")}</ul>`:`<p class="muted" style="margin:0;font-size:14px">Ningún establecimiento de ${esc(x.nombre)} ha diligenciado la cartilla todavía.</p>`;
   const hvT=x.evT.length?`<p style="font-size:14px;margin:8px 0 0">La alcaldía ya midió su <b>Huella Verde Territorial</b>: ${lvlChip(INSTR.T,score(x.evT[0]).level)}</p>`:"";
-  el.innerHTML=`<h3>${esc(x.nombre)}</h3><p class="sub">${esc(x.sub)}${pcc?" · "+pcc:""}</p><h4>Atractivos</h4>${atr}<h4>Áreas protegidas</h4>${ap}<h4>Huella Verde</h4>${hv}${hvT}<div class="mp-acts">${x.ev.length?`<a class="btn small ghost" href="#resultados">Ver resultados</a>`:""}<a class="btn small" href="#evaluar">Evaluar mi establecimiento</a><button type="button" class="btn small ghost" data-clr>Ver Caldas</button></div>`;
+  el.innerHTML=`<h3>${esc(x.nombre)}</h3><p class="sub">Subregión ${esc(x.sub)}${pcc?" · "+pcc:""}</p><h4>Atractivos</h4>${atr}<h4>Áreas protegidas</h4>${ap}<h4>Huella Verde</h4>${hv}${hvT}${sis}<div class="mp-acts">${x.ev.length?`<a class="btn small ghost" href="#resultados">Ver resultados</a>`:""}<a class="btn small" href="#evaluar">Evaluar mi establecimiento</a><button type="button" class="btn small ghost" data-clr>Ver Caldas</button></div>`;
   el.querySelector("[data-clr]").onclick=()=>mpSel(null);
 }
 function mpSel(d){MP.sel=MP.sel===d?null:d;renderMapa();if(d&&innerWidth<=900)document.getElementById("mp-det").scrollIntoView({behavior:"smooth",block:"nearest"})}
